@@ -15,20 +15,75 @@ Version control is an answer to the following questions (do you recognize some
 of them?):
 
 - "It broke ... hopefully I have a working version somewhere?"
-
 - "Can you please send me the latest version?"
-
 - "Where is the latest version?"
-
 - "Which version are you using?"
-
-- "Which version have the authors used in the paper I am trying to reproduce?"
-
+- "Which version have the authors used in the paper I am trying to reproduce?
 - "Found a bug! Since when was it there?"
-
 - "I am sure it used to work. When did it change?"
-
 - "My laptop is gone. Is my thesis now gone?"
+
+## Features: roll-back, branching, merging, collaboration
+
+**Problem: Your code worked two days ago, but is giving an error now.
+You don't know what you changed.**
+
+**Problem: You and your colleague want to work on the same code at the
+same time.**
+
+
+- **Roll-back**: you can always go back to a previous version and compare
+
+- **Branching and merging**:
+  - Work on different ideas at the same time
+  - Different people can work on the same code/project without interfering
+  - You can experiment with an idea and discard it if it turns out to be a bad idea
+
+:::{figure} img/gopher/gophers.png
+:alt: Branching explained with a gopher
+:width: 100%
+
+Image created using <https://gopherize.me/>
+([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
+:::
+
+- **Collaboration**: review, compare, share, discuss
+
+- [Example network graph](https://github.com/coderefinery/git-intro/network)
+
+
+## Reproducibility
+
+**Problem: Someone asks you about your results from 5 years ago.  Can
+you get the same results now?**
+
+- How do you indicate which version of your code you have used in your paper?
+- When you find a bug, how do you know **when precisely** this bug was introduced
+  (Are published results affected? Do you need to inform collaborators or users of your code?).
+
+With version control we can "annotate" code
+([browse this example online](https://github.com/networkx/networkx/blame/main/networkx/algorithms/boundary.py)):
+
+:::{figure} img/git-annotate-planet.png
+:alt: Example of a git-annotated code with code and history side-by-side
+:width: 100%
+:class: with-border
+
+Example of a git-annotated code with code and history side-by-side.
+:::
+
+
+
+## What we typically like to snapshot
+
+- Software (this is how it started but Git/GitHub can track a lot more)
+- Scripts
+- Documents (plain text files much better suitable than Word documents, this material is tracked using Git)
+- Manuscripts (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
+- Configuration files
+- Website sources
+- Data
+
 
 
 ## Demonstration
@@ -60,11 +115,10 @@ of them?):
 
 ## Exercises
 
-:::::{exercise} Exercise Git-1: Turn your project to a Git repo and share it
+:::::{exercise} Exercise Git-1: Turn a project to a Git repo and share it
 
 1. Create a new directory called **myproject** with one or few files in it.
-   This represents our own project. It is not yet a Git repository. You can try
-   that with your own project or use a simple placeholder example.
+   This represents your own project. It is not yet a Git repository. 
 2. Turn this new directory into a Git repository.
 3. Share this repository on GitHub (or GitLab, since it really works the same).
 
@@ -179,9 +233,8 @@ $ ls -l
 ```
 
 I will first initialize a Git repository in this directory.
-If you get an error, try without the `-b main` (and your default branch will
-then be called `master`, this will happen for Git versions older than
-2.28):
+If you get an error, try without the `-b main` (for Git versions older than
+2.28 your default branch will then be called `master`):
 ```console
 $ git init -b main
 ```
