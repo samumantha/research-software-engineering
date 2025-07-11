@@ -19,8 +19,50 @@
 - You may want others to use your code or contribute
   (almost impossible without documentation).
 
+## In-code documentation
 
-## Often a README is enough - checklist
+Docstrings can do a bit more than just comments:
+- Tools can generate help text automatically from the docstrings.
+- Tools can generate documentation pages automatically from code.
+
+It is common to write docstrings for functions, classes, and modules.
+
+Good docstrings describe:
+- What the function does
+- What goes in (including the type of the input variables)
+- What goes out (including the return type)
+
+**Naming is documentation**:
+Giving explicit, descriptive names to your code segments (functions, classes,
+variables) already provides very useful and important documentation. In
+practice you will find that for simple functions it is unnecessary to add a
+docstring when the function name and variable names already give enough
+information.
+
+## Sometimes version control is better than a comment
+
+````{admonition} Examples for code comments where Git is a better solution
+  **Keeping zombie code** "just in case" (rather use version control):
+  ```python
+  # do not run this code!
+  # if temperature > 0:
+  #     print("It is warm")
+  ```
+  Instead: Remove the code, you can always find it back in a previous version of your code in Git.
+
+  **Emulating version control**:
+  ```python
+  # John Doe: threshold changed from 0 to 15 on August 5, 2013
+  if temperature > 15:
+      print("It is warm")
+  ```
+  Instead: You can get this information from `git log` or `git show` or `git
+  annotate` or similar.
+````
+
+## Always have at least a README!
+
+An ideal README includes:
 
 - **Purpose**
 - Requirements
@@ -75,45 +117,33 @@ See also the
 
 ## Exercises
 
-:::{exercise} Exercise Documentation-1: Improve the README of your project
+````{exercise} Documentation-1: Comments
+  Let's take a look at two example comments (comments in Python start with `#`):
 
-In this exercise we will try to add a README to your project. If you have one
-already, we will try to improve it by using the checklist above.
+  **Comment A**
+  ```python
+  # now we check if temperature is below -50
+  if temperature < -50:
+      print("ERROR: temperature is too low")
+  ```
 
-If you are unsure where to start, start with one of the checklist items in
-bold.
-:::
+  **Comment B**
+  ```python
+  # we regard temperatures below -50 degrees as measurement errors
+  if temperature < -50:
+      print("ERROR: temperature is too low")
+  ```
+  Which of these comments is more useful? Can you explain why?
 
-:::{exercise} Exercise Documentation-2: In-code documentation
+  ```{solution} Solution
+  - Comment A describes **what** happens in this piece of code. This can be
+    useful for somebody who has never seen Python or a program, but for somebody
+    who has, it can feel like a redundant commentary.
 
-Have a look at the following examples and discuss which ones you find useful
-and which ones you find less useful and why.
+  - Comment B is probably more useful as it describes **why** this piece of code
+    is there, i.e. its **purpose**.
+  ```
+````
 
-Example A:
-```python
-# now we check if temperature is below -50
-if temperature < -50:
-    print("ERROR: temperature is too low")
-```
 
-Example B:
-```python
-# we regard temperatures below -50 degrees as measurement errors
-if temperature < -50:
-    print("ERROR: temperature is too low")
-```
 
-Example C:
-```python
-# do not run this code!
-# if temperature > 0:
-#     print("It is warm")
-```
-
-Example D:
-```python
-# John Doe: threshold changed from 0 to 15 on August 5, 2013
-if temperature > 15:
-    print("It is warm")
-```
-:::
