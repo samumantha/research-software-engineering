@@ -11,7 +11,6 @@ example
 version-control
 documentation
 reproducibility
-testing
 automation
 sharing
 ```
@@ -26,9 +25,12 @@ possibility to work in pairs, please do so.
 
 ```{toctree}
 :maxdepth: 1
-:caption: Older exercises
+:caption: Additional materials and exercises
+
 
 cmake
+container_exercises
+testing
 ```
 
 ```{toctree}
