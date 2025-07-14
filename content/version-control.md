@@ -8,6 +8,10 @@
   **GitHub/GitLab** (a platform to host Git repositories).
 :::
 
+:::{instructor-note}
+- xx min teaching/discussion
+:::
+
 
 ## Why do we need to keep track of versions?
 
@@ -387,14 +391,22 @@ Same as command line
 ::::
 :::::
 
-:::{exercise} Exercise Git-2: Create a new branch and a new commit
+:::{exercise} Exercise Git-2: Contribute to the example repository
+
+TODO: Have something in example repo that anyone could contribute to?
+
 - Fork the example repository: <https://github.com/coderefinery/planets>
 - Create a new branch **in your fork** and give it a descriptive name.
-- Make a modification **on the new branch** and create a new commit.
-- The new branch and the new commit now only exist on the fork, not yet in the
+- Make a modification **on the new branch** and create a new commit in the webinterface. 
+- The new branch and the new commit now only exist on your branch on your fork, not yet in the
   original repository.
 - In case you would like to contribute your change back to the original
   repository, you would create a pull request (you are welcome to try).
+TODO: Full workflow with Issue and PR description?
+
+TODO: In case you wanted to work on this exercise locally, the process would be the following:
+Fork on webinterface, clone to local computer, create new branch, work on branch, add, commit to local branch, push to remote - new branch :  now same stage as when working in webinterface. 
+
 :::
 
 ::::{exercise} Exercise Git-3: Archaeology using Git annotate ("blame")
@@ -403,7 +415,14 @@ Your goal is to find out when precisely
 was modified last time (which commit)?
 
 :::{solution}
+TODO: Describe how it can be found!
 It was this commit:
 <https://github.com/coderefinery/planets/commit/56cf6fdfef6a516ee369034d7c67a20237abb368>
 :::
 ::::
+
+
+
+:::{keypoints}
+TODO
+:::

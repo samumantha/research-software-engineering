@@ -8,6 +8,11 @@
   to make it persistent and findable 10 years from now.
 :::
 
+:::{instructor-note}
+- xx min teaching/discussion
+:::
+
+
 
 ## Why software licenses matter
 
@@ -148,4 +153,9 @@ group, discuss these with others:
 7. If you keep your code for yourself, you may think you do not need a license. However, remember that in most companies/universities, your employer is "owning" your work and when you leave you may not be allowed to "distribute your code to your future self". So the best is always to add a license!
 8. The least attractive licenses for companies with proprietary software are licenses where you would need to keep an open license when creating derivative work. For instance GPL and and AGPL. The most attractive licenses are permissive licenses where they can reuse, modify and relicense with no conditions. For instance MIT, BSD and Apache License.
 ```
+:::
+
+
+:::{keypoints}
+TODO
 :::

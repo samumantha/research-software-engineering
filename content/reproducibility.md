@@ -5,6 +5,11 @@ There are not many codes that have no dependencies.
 How should we **deal with dependencies**?
 :::
 
+:::{instructor-note}
+- xx min teaching/discussion
+:::
+
+
 
 ## How to avoid: "It works on my machine &#129335;"
 
@@ -22,10 +27,6 @@ Install dependencies into **isolated environments**:
 - Don't install dependencies globally for all projects.
 - Install them **from a file** which documents them at the same time.
 
-:::{keypoints}
-If somebody asks you what dependencies you have in your project, you should be
-able to answer this question **with a file**.
-:::
 
 
 ## Demonstration
@@ -47,9 +48,7 @@ able to answer this question **with a file**.
    - This can be used with [Apptainer](https://apptainer.org/)/
      [SingularityCE](https://sylabs.io/singularity/).
    - A container is like an **operating system inside a file**.
-   - If we have the time, we can try Exercise Reproducibility-3 below.
-   - This is a simple example. It is possible but trickier to
-     do MPI and/or GPU computing using containers.
+   - You can test some [container exercises](./container.md), if interested.
 
 
 ## Where to explore more
@@ -251,4 +250,8 @@ commit hashes or Git tags.
 :::
 
 
+:::{keypoints}
+If somebody asks you what dependencies you have in your project, you should be
+able to answer this question **with a file**.
+:::
 
