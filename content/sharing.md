@@ -8,6 +8,11 @@
   to make it persistent and findable 10 years from now.
 :::
 
+:::{instructor-note}
+- xx min teaching/discussion
+:::
+
+
 
 ## Why software licenses matter
 
@@ -78,9 +83,12 @@ Don't design your own otherwise compatibility won't be clear.
 
 ## Exercises
 
-:::{exercise} Exercise Sharing-1: Add a license file to your project
+:::{exercise} Exercise Sharing-1: Licensing
 
-You can use the [Joinup Licensing Assistant](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses).
+Review your organization’s recommendations or guidelines regarding which license to use when publishing code.
+Next, use the [Joinup Licensing Assistant](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses) to explore the key features and implications of that license.
+As a backup, check out the widely used MIT license.
+
 :::
 
 :::{exercise} Exercise Sharing-2: CITATION.cff and Zenodo sandbox
@@ -138,11 +146,16 @@ group, discuss these with others:
 ```{solution}
 1. As indicated [here](https://stackoverflow.com/help/licensing), all publicly accessible user contributions are licensed under [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/4.0/) license. See Stackoverflow [Terms of service](https://stackoverflow.com/legal/terms-of-service/public#licensing) for more detailed information.
 2. "Standard" licensing rules apply. So in this case, you would need to remove the portion of code you have copied from another package before being able to release your software.
-3. By default you are no authorized to use the content of a repository when there is no license. And derivative work is also not possible by default. Other risks: it may not be clear whether you can use and distribute (publish) the bugfixed code. For the repo owners it may not be clear whether they can use and distributed the bugfixed code. However, the authors may have forgotten to add a license so we suggest you to contact the authors (e.g. make an issue) and ask whether they are willing to add a license.
+3. By default you are not authorized to use the content of a repository when there is no license. And derivative work is also not possible by default. Other risks: it may not be clear whether you can use and distribute (publish) the bugfixed code. For the repo owners it may not be clear whether they can use and distributed the bugfixed code. However, the authors may have forgotten to add a license so we suggest you to contact the authors (e.g. make an issue) and ask whether they are willing to add a license.
 4. As mentionned in 3., the easiest is to fill an issue and explain the reasons why you would like to use this software (or update it).
 5. Combining software with different licenses can be tricky and it is important to understand compatibilities (or lack of compatibilities) of the various licenses. GPL license is the most protective (BSD and MIT are quite permissive) so for the resulting combined software you could use a GPL license. However, re-licensing may not be necessary.
 6. Derivative work would need to be shared under this strong copyleft license (e.g. AGPL or GPL), unless the components are only plugins or libraries.
 7. If you keep your code for yourself, you may think you do not need a license. However, remember that in most companies/universities, your employer is "owning" your work and when you leave you may not be allowed to "distribute your code to your future self". So the best is always to add a license!
 8. The least attractive licenses for companies with proprietary software are licenses where you would need to keep an open license when creating derivative work. For instance GPL and and AGPL. The most attractive licenses are permissive licenses where they can reuse, modify and relicense with no conditions. For instance MIT, BSD and Apache License.
 ```
+:::
+
+
+:::{keypoints}
+TODO
 :::

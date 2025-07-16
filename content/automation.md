@@ -5,6 +5,10 @@
 - Understand the pros and cons of "simple" scripts.
 :::
 
+:::{instructor-note}
+- xx min teaching/discussion
+:::
+
 
 ## What if we need to run many similar calculations?
 
@@ -88,3 +92,7 @@ In this situation we need a **workflow/pipeline** management tool.
 - [Nextflow](https://www.nextflow.io/)
 - There are many more workflow/pipeline
   tools and frameworks. **Do not invent your own!**
+
+:::{keypoints}
+TODO
+:::
