@@ -1,17 +1,39 @@
-# Reproducible dependencies and environments
+# Reproducible dependencies, environments and workflows
 
 :::{objectives}
-There are not many codes that have no dependencies.
-How should we **deal with dependencies**?
+- Understand that there are tools to help with dependency management
+- Understand the difference between a **script** and a **workflow**.
+- Understand the pros and cons of "simple" scripts.
 :::
 
 :::{instructor-note}
-- xx min teaching/discussion
+- 20 min teaching/discussion
 :::
 
 
+# It all starts with a good directory structure ...
+
+```
+project_name/
+├── README.md             # overview of the project
+├── data/                 # data files used in the project
+│   ├── README.md         # describes where data came from
+│   └── sub-folder/       # may contain subdirectories
+├── processed_data/       # intermediate files from the analysis
+├── manuscript/           # manuscript describing the results
+├── results/              # results of the analysis (data, tables, figures)
+├── src/                  # contains all code in the project
+│   ├── LICENSE           # license for your code
+│   ├── requirements.txt  # software requirements and dependencies
+│   └── ...
+└── doc/                  # documentation for your project
+    ├── index.rst
+    └── ...
+```
 
 ## How to avoid: "It works on my machine &#129335;"
+
+There are not many codes that have no dependencies.
 
 Use a **standard way** to list dependencies in your project:
 - Python: `requirements.txt` or `environment.yml`
@@ -29,26 +51,7 @@ Install dependencies into **isolated environments**:
 
 
 
-## Demonstration
 
-1. The dependencies in our [example
-   project](https://github.com/coderefinery/planets) are listed in a
-   [environment.yml](https://github.com/coderefinery/planets/blob/main/environment.yml)
-   file.
-
-   :::{discussion}
-   - Shouldn't the dependencies in the
-     [environment.yml](https://github.com/coderefinery/planets/blob/main/environment.yml)
-     file be pinned to specific versions?
-   - When is a good time to pin them?
-   :::
-
-2. We also have a [container definition
-   file](https://github.com/coderefinery/planets/blob/main/container.def):
-   - This can be used with [Apptainer](https://apptainer.org/)/
-     [SingularityCE](https://sylabs.io/singularity/).
-   - A container is like an **operating system inside a file**.
-   - You can test some [container exercises](./container.md), if interested.
 
 
 ## Where to explore more
@@ -249,9 +252,111 @@ commit hashes or Git tags.
 ```
 :::
 
+## Additional optional exercise
+
+::::{exercise} Exercise Additional-repro: You find a useful code online...
+
+Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+
+You find the environment.yml. Will you get the same environment now, that someone will get a year from now?
+
+
+:::{solution}
+No, since, except for Python version, no version numbers are defined. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.
+:::
+
+# Automation and reproducible workflows
+
+## What if we need to run many similar calculations?
+
+It all started relatively simple:
+```bash
+python generate-data.py --num-planets 100 --output-file initial.csv
+
+python simulate.py --num-steps 50 \
+                   --input-file initial.csv \
+                   --output-file final.csv \
+                   --trajectories-file trajectories.npz
+
+python animate.py --initial-file initial.csv \
+                  --trajectories-file trajectories.npz \
+                  --output-file animation.mp4
+```
+
+But now we want to run this for **different numbers of planets**:
+10, 20, 30, 40, ...
+
+One possible solution:
+```{code-block} bash
+---
+emphasize-lines: 3,4,14,15
+---
+#!/usr/bin/env bash
+
+for num_planets in 10 20 30 40 50; do
+    python generate-data.py --num-planets ${num_planets} \
+                            --output-file initial.csv
+
+    python simulate.py --num-steps 50 \
+                       --input-file initial.csv \
+                       --output-file final.csv \
+                       --trajectories-file trajectories.npz
+
+    python animate.py --initial-file initial.csv \
+                      --trajectories-file trajectories.npz \
+                      --output-file animation-${num_planets}.mp4
+done
+```
+
+
+## Discussion
+
+:::{discussion} How would you solve this problem?
+Can you list some alternatives to the solution presented above
+(for-loop inside a shell script)?
+:::
+
+::::{discussion} What are the pros and cons of the solution presented above?
+- Consider the case where a step can take hours.
+- Imagine needing to run hundreds of calculations.
+- Consider the case where a step/calculation can fail.
+- Consider the case where you might
+  find a mistake in one of the Python scripts.
+
+:::{solution}
+What is good about the shell script solution:
+- It documents what steps are taken.
+- Relatively simple.
+- Good solution if you only need to run this once or if it takes no time.
+
+Problems:
+- Independent calculations are run one after the other.
+- If some of them fail, you need to re-run everything or start commenting out
+  lines.
+- If you find a mistake in one of the scripts, we again need to re-run
+  everything or start commenting out lines.
+- What if separate steps need different resources (e.g., memory, CPU)
+  or environments (e.g., different Python versions)?
+
+In this situation we need a **workflow/pipeline** management tool.
+:::
+::::
+
+
+## Where to explore more
+
+- [Snakemake](https://snakemake.github.io/)
+- [Nextflow](https://www.nextflow.io/)
+- There are many more workflow/pipeline
+  tools and frameworks. **Do not invent your own!**
+
+
+
+::::
+
 
 :::{keypoints}
-If somebody asks you what dependencies you have in your project, you should be
-able to answer this question **with a file**.
+- Ideally you can answer the question about dependencies of your code **with one file**.
+- Workflow tools can support reproducibility of running multiple scripts, with multiple files and/or input variables.
 :::
 
