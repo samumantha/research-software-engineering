@@ -9,7 +9,8 @@
 :::
 
 :::{instructor-note}
-- xx min teaching/discussion
+- 20 min teaching/discussion
+- 20 min exercise
 :::
 
 
@@ -87,8 +88,6 @@ Example of a git-annotated code with code and history side-by-side.
 - Configuration files
 - Website sources
 - Data
-
-
 
 ## Demonstration
 
@@ -391,38 +390,35 @@ Same as command line
 ::::
 :::::
 
-:::{exercise} Exercise Git-2: Contribute to the example repository
 
-TODO: Have something in example repo that anyone could contribute to?
 
-- Fork the example repository: <https://github.com/coderefinery/planets>
-- Create a new branch **in your fork** and give it a descriptive name.
-- Make a modification **on the new branch** and create a new commit in the webinterface. 
-- The new branch and the new commit now only exist on your branch on your fork, not yet in the
-  original repository.
-- In case you would like to contribute your change back to the original
-  repository, you would create a pull request (you are welcome to try).
-TODO: Full workflow with Issue and PR description?
-
-TODO: In case you wanted to work on this exercise locally, the process would be the following:
-Fork on webinterface, clone to local computer, create new branch, work on branch, add, commit to local branch, push to remote - new branch :  now same stage as when working in webinterface. 
-
-:::
-
-::::{exercise} Exercise Git-3: Archaeology using Git annotate ("blame")
+::::{exercise} Exercise Git-2: Archaeology using Git annotate ("blame")
 Your goal is to find out when precisely
 [this line](https://github.com/coderefinery/planets/blob/813d49a247f36e9c1e10cbe78ecf1ae4b6e971c3/simulate.py#L108)
 was modified last time (which commit)?
 
 :::{solution}
-TODO: Describe how it can be found!
 It was this commit:
 <https://github.com/coderefinery/planets/commit/56cf6fdfef6a516ee369034d7c67a20237abb368>
 :::
 ::::
 
+## Additional exercise
 
+::::{exercise} Exercise Additional-vc: You find a useful code online...
+
+Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+
+How would you go about trying it out? (You do not have to actually do it, but can just take some notes)
+
+:::{solution}
+Start by looking at the README. Let's talk about it more in the next episode!
+:::
+
+::::
 
 :::{keypoints}
-TODO
+- Version control helps track changes, avoid confusion over file versions, and recover from mistakes or data loss.
+- It enables multiple users to work simultaneously without conflicts.
+
 :::
