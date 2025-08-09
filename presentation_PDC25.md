@@ -6,7 +6,7 @@ class: center, middle, gray-background
 
 ### CSC - IT Center for Science
 
-<img src="img/ccsc.png" style="height: 140px;"/>
+<img src="img/csc.png" style="height: 140px;"/>
 <img src="img/coderefinery.png" style="height: 140px;"/>
 &nbsp;
 
@@ -15,7 +15,7 @@ Text: CC-BY 4.0
 
 ---
 
-# Part 1 - 10 min
+# Part 1 - 15 min
 
 - About me
 - Why are we talking about this?
@@ -26,13 +26,13 @@ Text: CC-BY 4.0
 ---
 
 
-# About me
+# About us
 
-.left-column30[
-TODO
+.left-column50[
+Johan you already know :)
 ]
 
-.right-column70[
+.right-column50[
 - Geoecology and Geoinformatics background.
 
 - Researcher who writes code
@@ -51,13 +51,26 @@ TODO
 
 # Why are we talking about this?
 
-RSE is part of computational research
-
+- RSE is part of computational research, but not often taught.
+- "You don't know what you don't know"
+- Working alone, working with others, sharing your work
+- Hands-on experience
 
 ---
 
-# Example project
+# Example project: simulating the motion of a number of planets
 
+- N-body simulation 
+- Written in Python. 
+- No need to understand the code in any detail.
+
+Some key points:
+- We can choose the number of planets.
+- Each planet starts with a random position, velocity, and mass.
+- At each time step, the code calculates the gravitational force between each pair of planets.
+- The forces accelerate each planet, the acceleration modifies the velocity, the velocity modifies the position of each planet.
+- We can choose the number of time steps.
+- The units were chosen to make numbers easy to read.
 
 ---
 
@@ -193,11 +206,13 @@ Inspiration and where to find more:
 ]
 
 .right-column50[
-<img src="img/octopus.jpeg"
-     alt="Branching explained with an octopus"
-     style="width: 100%">
+:::{figure} img/gopher/gophers.png
+:alt: Branching explained with a gopher
+:width: 100%
 
-.cite[Source: <https://twitter.com/jay_gee/status/703360688618536960>]
+What if two people, at the same time, make two different changes?  Git
+can merge them together easily.  Image created using <https://gopherize.me/>
+([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
 ]
 
 ---
@@ -245,6 +260,17 @@ Inspiration and where to find more:
 
 - Also: better code quality
 
+## Demonstration
+
+<https://github.com/coderefinery/planets>
+
+
+- Commits = snapshots with author, date, message, and ID
+- Branches = parallel universes for safe experimentation
+- Annotate code to track changes line by line
+- Collaboration: fork, clone, review, share, discuss
+- Code review via pull or merge requests
+
 
 ---
 
@@ -268,7 +294,7 @@ class: middle, inverse
 # &#128230;
 
 Inspiration and where to find more:
-- [Reproducible research](https://coderefinery.github.io/reproducible-research/)
+- [CodeRefinery reproducible research lesson ](https://coderefinery.github.io/reproducible-research/)
 - [The Turing Way: Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html)
 - [Ten simple rules for writing Dockerfiles for reproducible data science](https://doi.org/10.1371/journal.pcbi.1008316)
 - [Computing environment reproducibility](https://doi.org/10.5281/zenodo.8089471)
@@ -762,9 +788,6 @@ date-released: 2021-08-11
 ---
 
 # Sharing and reusing - Great resources
-
-- [UiT research software licensing guide (draft)](https://research-software.uit.no/blog/2023-software-licensing-guide/)
-
 - Guide from the Aalto University in Finland: ["Opening your Software at Aalto University"](https://www.aalto.fi/en/open-science-and-research/opening-your-software-at-aalto-university)
 
 - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
@@ -792,42 +815,6 @@ Part 6 - Wrap up - 10 min
 
 ---
 
-# Version control
-
----
-
-.left-column50[
-### Where to start? Simple personal projects
-
-- Start with just the `main` branch
-- Later use branches for unfinished/untested ideas
-- Use tags to mark important milestones (`phd-thesis-submitted`, `published-manuscript`)
-- Better too many commits than too few
-- Better imperfect commits than no commits
-
-### Projects with few persons
-
-- Write-protect the `main` branch
-- New idea/feature: new branch
-- Use code review: changes are reviewed and discussed before they are merged
-]
-
-.right-column50[
-- [Install and configure Git](https://coderefinery.github.io/installation/)
-
-- In 3 commands from nothing to first commit:
-```bash
-$ git init
-$ git add myscript.py
-$ git commit
-```
-
-- Go through [CodeRefinery](https://coderefinery.org/) lessons ([Git
-  intro](https://coderefinery.github.io/git-intro/) and [Collaborative
-  Git](https://coderefinery.github.io/git-collaborative/))
-]
-
-
 ---
 
 # Conclusions/recommendations
@@ -844,121 +831,11 @@ $ git commit
 
 - Make your code/script/notebook citable and give it a license
 
-- Join a [CodeRefinery](https://coderefinery.org/) workshop
-
 ---
 
-## What we did not talk about but is important part of RSE
+## What we did not talk about but is important 
 
----
-
-## Container: "operating system inside a file"
-
-Example [SingularityCE](https://sylabs.io/docs/)/[Apptainer](https://apptainer.org) definition file ("recipe"):
-```docker
-Bootstrap: docker
-From: ubuntu:20.04
-
-%post
-    export DEBIAN_FRONTEND=noninteractive
-    apt-get update -y
-
-    apt install -y git build-essential pkg-config
-    apt install -y libz-dev libbz2-dev liblzma-dev
-    apt install -y libcurl4-openssl-dev libssl-dev libgsl-dev
-
-    git clone https://github.com/someuser/sometool.git
-    cd sometool
-
-    make
-
-%runscript
-    export PATH=/sometool/bin:$PATH
-
-    $@
-```
-
-Popular implementations: [Docker](https://www.docker.com/),
-[SingularityCE](https://sylabs.io/docs/) (popular on HPC)
-[Apptainer](https://apptainer.org) (popular on HPC, fork of
-Singularity), [podman](https://podman.io/)
-
----
-
-## Container use cases
-
-- Create a time capsule and share it on [Zenodo](https://zenodo.org/) (or similar)
-
-- Document and .emph[communicate dependencies]
-
-- Have a common platform to test the code
-
-- Easier to move it to other Linux computers/clusters
-
-- Forward "travel in time": if cluster has too old software
-
-- Backwards "travel in time": if software is no longer maintained and does not build on laptop/cluster
-
-
-### Typical critique points
-
-- "not the proper way to build"
-- performance
-- composability
-
----
-
-# Automated testing
-
-# &#129302; &#128680; &#9989;
-
-Inspiration and where to find more:
-- [Software testing lesson material](https://coderefinery.github.io/testing/)
-
----
-
-# Technical possibilities
-
-Any programming language has tools/libraries to perform:
-
-- .emph[Unit tests]: test a function or a module and
-  compare function result to a reference
-
-- .emph[End-to-end test]: run the whole code and compare result to a reference
-
-- .emph[Coverage analysis]: Give overview of which parts of the code are tested
-
-- The test (set) can be run .emph[automatically] on [GitHub
-  Actions](https://github.com/features/actions) or [GitLab
-  CI](https://docs.gitlab.com/ee/ci/) after every Git commit
-
----
-
-# Motivation
-
-- .emph[Less scary to change code]: tests will tell you whether something broke
-
-- Unit tests can .emph[guide towards better structured code]: complicated code is more difficult to test
-
-- .emph[Easier for new people] to join
-
-- Easier for somebody to .emph[revive an old code]
-
----
-
-# Testing - Where to start
-
-- A simple script or notebook probably does not need an automated test
-
-
-### If you have nothing yet
-
-- Start with an end-to-end test
-- Describe in words how *you* check whether the code still works
-- Translate the words into a script
-- Run the script automatically on every code change
-
-
-### If you want to start with unit-testing
-
-- You want to rewrite a function? Start adding a unit test right there first.
+- Containers (operating system and tools within one file)
+- automated testing
+- modular code development
+-> Come to CodeRefinery workshop or read materials!
