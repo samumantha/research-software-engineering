@@ -13,11 +13,13 @@ class: center, middle, gray-background
 Text: CC-BY 4.0
 (Big thanks to previous versions by Radovan Bast)
 
+Link to these slides: TODO
+
 ---
 
 # Part 1 - 15 min
 
-- About me
+- About us
 - Why are we talking about this?
 - CodeRefinery
 - Topic overview
@@ -43,13 +45,17 @@ Johan you already know :)
 
 - Leading the
   [CodeRefinery project and community](https://coderefinery.org).
-
-- 
 ]
 
 ---
 
-# Why are we talking about this?
+# What is Research Software Engineering?
+
+Here it is about all the essential tools which are usually skipped in academic education so everyone can make full use of software, computing, and data with focus on **reusability, reproducibility, and openness**.
+
+-> Everything **around programming**, that helps you be more efficient in your work and supports the reusability of your code. 
+
+# Why are we talking about Research Software Engineering?
 
 - RSE is part of computational research, but not often taught.
 - "You don't know what you don't know"
@@ -58,21 +64,6 @@ Johan you already know :)
 
 ---
 
-# Example project: simulating the motion of a number of planets
-
-- N-body simulation 
-- Written in Python. 
-- No need to understand the code in any detail.
-
-Some key points:
-- We can choose the number of planets.
-- Each planet starts with a random position, velocity, and mass.
-- At each time step, the code calculates the gravitational force between each pair of planets.
-- The forces accelerate each planet, the acceleration modifies the velocity, the velocity modifies the position of each planet.
-- We can choose the number of time steps.
-- The units were chosen to make numbers easy to read.
-
----
 
 class: center, middle, inverse
 
@@ -127,7 +118,18 @@ Lectures and exercises:
 
 - [Sharing and reusing](https://coderefinery.github.io/research-software-engineering/sharing-reusing/)
 
-Longer version of all topics including more exercises can be found in [CodeRefinery lesson materials](https://coderefinery.org/lessons)
+Longer version of all topics including more exercises can be found in [CodeRefinery lesson materials](https://coderefinery.org/lessons).
+
+---
+
+
+# Example project: simulating the motion of a number of planets
+
+- N-body simulation 
+- Written in Python. 
+- No need to understand the code in any detail.
+
+TODO: Link
 
 ---
 
@@ -211,7 +213,7 @@ Inspiration and where to find more:
 :width: 100%
 
 What if two people, at the same time, make two different changes?  Git
-can merge them together easily.  Image created using <https://gopherize.me/>
+can support merging them together.  Image created using <https://gopherize.me/>
 ([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
 ]
 
@@ -224,6 +226,7 @@ can merge them together easily.  Image created using <https://gopherize.me/>
      style="width: 100%">
 
 ---
+
 
 ## Talking about code
 
@@ -260,6 +263,8 @@ can merge them together easily.  Image created using <https://gopherize.me/>
 
 - Also: better code quality
 
+---
+
 ## Demonstration
 
 <https://github.com/coderefinery/planets>
@@ -271,8 +276,21 @@ can merge them together easily.  Image created using <https://gopherize.me/>
 - Collaboration: fork, clone, review, share, discuss
 - Code review via pull or merge requests
 
+---
+
+## Note: Git can support more than code!
+
+- Software (this is how it started but Git/GitHub can track a lot more)
+- Scripts
+- Documents (plain text files much better suitable than Word documents, this material and slides are tracked using Git)
+- Manuscripts (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
+- Configuration files
+- Website sources : [Source for CodeRefinery website](https://github.com/coderefinery/coderefinery.org/)
+- Data (see also git-annex, git LFS)
 
 ---
+
+
 
 Exercises I - 20 min
 
@@ -446,8 +464,8 @@ class: middle, inverse
 # &#128151;&#9993;&#65039; to your future self
 
 Inspiration and where to find more:
-- [Documentation lesson material](https://coderefinery.github.io/documentation/) by [CodeRefinery](https://coderefinery.org/)
-- [Talk material "Documenting code" by S. Wittke](https://github.com/samumantha/documentation_example)
+- [Documentation - CodeRefinery lesson material](https://coderefinery.github.io/documentation/) by [CodeRefinery](https://coderefinery.org/)
+- [My short talk on "Documenting code"](https://github.com/samumantha/documentation_example)
 
 ---
 
@@ -619,7 +637,6 @@ Tutorials covering key functionality.
 
 - [All CodeRefinery lessons](https://coderefinery.org/lessons/from-coderefinery/)
 - <https://github.com/networkx/networkx>
-
 
 
 ---
@@ -815,8 +832,6 @@ Part 6 - Wrap up - 10 min
 
 ---
 
----
-
 # Conclusions/recommendations
 
 ## It's about communicating!
@@ -838,4 +853,5 @@ Part 6 - Wrap up - 10 min
 - Containers (operating system and tools within one file)
 - automated testing
 - modular code development
--> Come to CodeRefinery workshop or read materials!
+-> Come to [CodeRefinery workshop](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
+
