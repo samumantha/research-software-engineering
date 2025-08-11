@@ -49,11 +49,6 @@ Install dependencies into **isolated environments**:
 - Don't install dependencies globally for all projects.
 - Install them **from a file** which documents them at the same time.
 
-
-
-
-
-
 ## Where to explore more
 
 - [Reproducible research](https://coderefinery.github.io/reproducible-research/)
