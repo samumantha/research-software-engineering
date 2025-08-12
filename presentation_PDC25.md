@@ -35,6 +35,9 @@ Johan you already know :)
 ]
 
 .right-column50[
+
+Samantha: 
+
 - Geoecology and Geoinformatics background.
 
 - Researcher who writes code
@@ -54,6 +57,8 @@ Johan you already know :)
 Here it is about all the essential tools which are usually skipped in academic education so everyone can make full use of software, computing, and data with focus on **reusability, reproducibility, and openness**.
 
 -> Everything **around programming**, that helps you be more efficient in your work and supports the reusability of your code. 
+
+---
 
 # Why are we talking about Research Software Engineering?
 
@@ -125,17 +130,17 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 
 # Example project: simulating the motion of a number of planets
 
+<img src="img/example_project.png" style="height: 140px;"/>
+
 - N-body simulation 
 - Written in Python. 
 - No need to understand the code in any detail.
 
-TODO: Link
+Link to example project: <https://github.com/coderefinery/planets>
 
 ---
 
 # Part 2 - 20 min
-
-CURRENT!
 
 - Find more info
 - Motivation
@@ -197,25 +202,19 @@ Inspiration and where to find more:
 
 ## Features: roll-back, branching, merging, collaboration
 
-.left-column50[
 - .emph[Roll-back]: you can always go back to a previous version and compare
 
 - .emph[Branching and merging]: work on different ideas at the same time
 
 - .emph[Collaboration]: review, compare, share, discuss
 
-- [Example network graph](https://github.com/coderefinery/git-intro/network)
-]
 
-.right-column50[
-:::{figure} img/gopher/gophers.png
-:alt: Branching explained with a gopher
-:width: 100%
+<img src="img/gophers.png" style="width: 100%;"/>
 
 What if two people, at the same time, make two different changes?  Git
 can support merging them together.  Image created using <https://gopherize.me/>
 ([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
-]
+
 
 ---
 
@@ -257,6 +256,8 @@ can support merging them together.  Image created using <https://gopherize.me/>
      alt="Screen-shot of a GitHub Network graph"
      style="width: 80%">
 
+<br>
+
 - Changes are reviewed before they are merged
 
 - Main motivation for code review is the .emph[collaborative learning]
@@ -269,6 +270,9 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 <https://github.com/coderefinery/planets>
 
+<br>
+<br>
+
 
 - Commits = snapshots with author, date, message, and ID
 - Branches = parallel universes for safe experimentation
@@ -280,19 +284,24 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 ## Note: Git can support more than code!
 
+<br>
+<br>
+
 - Software (this is how it started but Git/GitHub can track a lot more)
 - Scripts
 - Documents (plain text files much better suitable than Word documents, this material and slides are tracked using Git)
 - Manuscripts (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
 - Configuration files
 - Website sources : [Source for CodeRefinery website](https://github.com/coderefinery/coderefinery.org/)
-- Data (see also git-annex, git LFS)
+- Data (see also [git-annex](https://scicomp.aalto.fi/scicomp/git-annex/), [git LFS](https://git-lfs.com/))
 
 ---
 
-
+class: middle, inverse
 
 Exercises I - 20 min
+
+TODO:link
 
 ---
 
@@ -328,8 +337,6 @@ Inspiration and where to find more:
 ---
 
 
-class: middle, inverse
-
 # It all starts with a good directory structure ...
 
 ```
@@ -362,7 +369,7 @@ class: middle, center, inverse
 
 ## Recording dependencies
 
-.left-column50[
+
 **Conda, Anaconda, pip, virtualenv, Pipenv, pyenv, Poetry, rye, requirements.txt,
 environment.yml, renv**, ...
 - Define dependencies
@@ -374,20 +381,24 @@ environment.yml, renv**, ...
 
 Isolated environments help you make sure
 that you .emph[know your dependencies]!
-]
 
-.right-column50[
+---
+
+## Dependencies - kitchen analogy
+
 <img src="img/kitchen/libraries.png"
      alt="Kitchen with few open cooking books"
      style="height: 250px;" />
 
 .cite[Midjourney, CC-BY-NC 4.0]
 
-Kitchen analogy
+<br>
+
 - Software <-> recipe
+
 - Data <-> ingredients
+
 - Libraries <-> cooking books/blogs
-]
 
 ---
 
@@ -400,7 +411,7 @@ Kitchen analogy
 ]
 
 .right-column50[
-Kitchen analogy
+## Containers- kitchen analogy
 - Our codes/scripts <-> cooking recipes
 
 - Container definition files <-> like a blueprint to build a kitchen with all
@@ -415,8 +426,10 @@ Kitchen analogy
 
 ## Recording computational steps
 
+<br>
+
 .left-column60[
-We need a way to record and .emph[communicate] computational steps
+Apart from the environment we also need a way to record and .emph[communicate] computational steps:
 
 - **README** (steps written out "in words")
 
@@ -437,6 +450,7 @@ We need a way to record and .emph[communicate] computational steps
 
 ---
 
+class: middle, inverse
 
 # Break - 20 min
 
@@ -453,8 +467,6 @@ Documentation
 - README
 - Growing out of readme
 
-
-
 ---
 
 class: middle, inverse
@@ -469,11 +481,14 @@ Inspiration and where to find more:
 
 ---
 
-# Why? &#128151;&#9993;&#65039; to your future self
+## Why? &#128151;&#9993;&#65039; to your future self
 
-- You will probably use your code in the future and may forget details.
+<br>
 
-- You may want others to use your code (almost impossible without documentation).
+
+- .emph[You] will probably use your code in the future and may forget details.
+
+- You may want .emph[others] to use your code (almost impossible without documentation).
 
 - You may want others to contribute to the code.
 
@@ -481,36 +496,11 @@ Inspiration and where to find more:
 
 ---
 
-# Checklist
-
-- .emph[Purpose]
-- Installation instructions
-- Dependencies and their versions or version ranges
-- .emph[Copy-paste-able example to get started]
-- Tutorials covering key functionality
-- Reference documentation (e.g. API) covering all functionality
-- How do you want to be asked questions (mailing list or forum or chat or issue tracker)
-- Possibly a FAQ section
-- Authors
-- .emph[Recommended citation]
-- License
-- Contribution guide
-
-See also:
-- [JOSS review checklist](https://joss.readthedocs.io/en/latest/review_checklist.html)
-
----
+## In-code documentation
 
 Not very useful (more commentary than comment):
 ```python
 # now we check if temperature is larger than -50
-if temperature > -50:
-    print("ERROR: temperature is too low")
-```
-
-More useful (explaining .emph[why]):
-```python
-# we regard temperatures below -50 degrees as measurement errors
 if temperature > -50:
     print("ERROR: temperature is too low")
 ```
@@ -531,7 +521,18 @@ if temperature > 15:
 
 ---
 
-# In-code documentation
+## In-code documentation
+
+More useful (explaining .emph[why]):
+```python
+# we regard temperatures below -50 degrees as measurement errors
+if temperature > -50:
+    print("ERROR: temperature is too low")
+```
+
+---
+
+## In-code documentation
 
 .left-column30[
 - Useful for those who want/need to understand and modify the code
@@ -567,6 +568,26 @@ print(kelvin_to_celsius.__doc__)
 ]
 
 ---
+
+## README - Checklist
+
+- .emph[Purpose]
+- Installation instructions
+- Dependencies and their versions or version ranges
+- .emph[Copy-paste-able example to get started]
+- Tutorials covering key functionality
+- Reference documentation (e.g. API) covering all functionality
+- How do you want to be asked questions (mailing list or forum or chat or issue tracker)
+- Possibly a FAQ section
+- Authors
+- .emph[Recommended citation]
+- License
+- Contribution guide
+
+See also[JOSS review checklist](https://joss.readthedocs.io/en/latest/review_checklist.html)
+
+---
+
 
 ## Often a README is enough (first impression!)
 
@@ -611,7 +632,7 @@ Tutorials covering key functionality.
 
 ---
 
-# When projects grow out of a README
+## When projects grow out of a README
 
 - Write documentation in
   [Markdown (.md)](https://en.wikipedia.org/wiki/Markdown)
@@ -638,10 +659,14 @@ Tutorials covering key functionality.
 - [All CodeRefinery lessons](https://coderefinery.org/lessons/from-coderefinery/)
 - <https://github.com/networkx/networkx>
 
-
 ---
 
-Exercise II - 20 min
+class: middle, inverse
+
+Exercises II - 20 min
+
+TODO:link
+
 
 ---
 
@@ -697,9 +722,11 @@ Inspiration and where to find more:
 
 <img src="img/ai/field.png"
      alt="Generated image of an empty field"
-     style="height: 250px;" />
+     style="height: 150px;" />
 
 .cite[Midjourney, CC-BY-NC 4.0]
+
+<br>
 
 - License does not seem important
 - Easy to change (*)
@@ -714,9 +741,11 @@ Inspiration and where to find more:
 
 <img src="img/hundertwasserhaus.jpg"
      alt="Photo of Hunderwasserhaus in Vienna"
-     style="height: 250px;" />
+     style="height: 150px;" />
 
 .cite[C.Stadler/Bwag, CC-BY-SA 4.0]
+
+<br>
 
 - Can be important
 - Especially when combining codes or organizations
@@ -746,7 +775,7 @@ Inspiration and where to find more:
 
 ---
 
-# How do I add a license to my work?
+## How do I add a license to my work?
 
 - Create a `LICENSE` file or `LICENSES/` folder in your project which will hold
   [license texts](https://reuse.software/faq/#license-templates).
@@ -757,7 +786,6 @@ Inspiration and where to find more:
   #
   # SPDX-License-Identifier: MIT
   ```
-- Add a [CITATION.cff file](https://citation-file-format.github.io/) (example later)
 
 Practical steps for making **changes to an existing project** (with a license
 that allows you to do so):
@@ -768,7 +796,7 @@ that allows you to do so):
 
 ---
 
-# Make it persistent and citable
+## Make it persistent and citable
 
 - Add a [CITATION.cff](https://citation-file-format.github.io/) file:
 ```yml
@@ -796,7 +824,9 @@ date-released: 2021-08-11
 
 ---
 
-# Many tools understand CITATION.cff
+## Many tools understand CITATION.cff
+
+<br>
 
 <img src="img/cite-this-repo.png"
      alt="Screenshot of a GitHub repository when clicked on 'Cite this repository'"
@@ -805,6 +835,7 @@ date-released: 2021-08-11
 ---
 
 # Sharing and reusing - Great resources
+
 - Guide from the Aalto University in Finland: ["Opening your Software at Aalto University"](https://www.aalto.fi/en/open-science-and-research/opening-your-software-at-aalto-university)
 
 - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
@@ -819,8 +850,11 @@ date-released: 2021-08-11
 
 ---
 
+class: middle, inverse
 
-Exercise - 20 min
+Exercises III - 20 min
+
+TODO:link
 
 ---
 
@@ -830,7 +864,12 @@ Part 6 - Wrap up - 10 min
 
 ## Where to go from here
 
+<img src="img/reproducibility.jpg"
+     alt="A person showing another person what steps to take to make their data research reproducible. There is a path with several steps- Here is my data - Here are my tools - Here is my code - Here are my results"
+     style="width: 100%;" />
+
 ---
+
 
 # Conclusions/recommendations
 
@@ -851,7 +890,10 @@ Part 6 - Wrap up - 10 min
 ## What we did not talk about but is important 
 
 - Containers (operating system and tools within one file)
-- automated testing
-- modular code development
+
+- Automated testing
+
+- Modular code development
+
 -> Come to [CodeRefinery workshop](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
 

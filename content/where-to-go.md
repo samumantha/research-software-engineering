@@ -8,7 +8,7 @@
 - 10 min teaching/discussion
 ```
 
-```{figure} /img/turing-way/reproducibility.jpg
+```{figure} /img/reproducibility.jpg
 :alt: "A person showing another person what steps to take to make their data research reproducible. There is a path with several steps- Here is my data - Here are my tools - Here is my code - Here are my results"
 :width: 100%
 ```
