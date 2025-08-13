@@ -11,7 +11,7 @@ class: center, middle, gray-background
 &nbsp;
 
 Text: CC-BY 4.0
-(Big thanks to previous versions by Radovan Bast)
+(Big thanks to previous versions by Radovan Bast and the CodeRefinery team)
 
 Link to these slides: TODO
 
