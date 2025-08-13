@@ -1,14 +1,16 @@
 # Documentation
 
 :::{objectives}
-- Improve the README of your project or our example project.
+- Understand that there are many ways to do documentation
+- Recognize the limitations of source code comments.
+- Gain familiarity with using Sphinx and Markdown to create documentation.
 :::
 
 
 
 :::{instructor-note}
-- xx min teaching/discussion
-- xx min exercise
+- 20 min teaching/discussion
+- 20 min exercise
 :::
 
 
@@ -434,6 +436,23 @@ int main()
   [myst-nb](https://myst-nb.readthedocs.io/) extension to be installed.
 `````
 
+
+## Additional optional exercise
+
+::::{exercise} Exercise Additional-doc: You find a useful code online...
+
+Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+
+Where do you look for information on how to install, run the code? Can you find all needed information? 
+
+
+
+:::{solution}
+In the README. 
+Sections are there but it seems to be a work in progress and many are not filled with information. You could ask the author to add more information via issue.
+:::
+
+::::
 
 :::{keypoints}
 - Often a README is enough.

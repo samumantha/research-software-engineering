@@ -1,7 +1,6 @@
 # Sharing (licensing and publishing)
 
 :::{objectives}
-- Add a **license** to your project.
 - Understand why software licenses matter.
 - Learn how to make a code project **persistent** and **citable**.
 - Understand that publishing a code on GitHub is not enough
@@ -9,7 +8,8 @@
 :::
 
 :::{instructor-note}
-- xx min teaching/discussion
+- 20 min teaching/discussion
+- 20 min exercise
 :::
 
 
@@ -44,10 +44,11 @@ Don't design your own otherwise compatibility won't be clear.
 - [Joinup Licensing Assistant](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
 - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
 
+## Getting credit for your work
 
-## Demonstration
+How do we get to know who uses our code?
+One way is by following citations. It is good practice to cite not only publications but also software. To make this as easy as possible for others to do, we can provide all information needed in a single file, the `CITATION.cff` file.
 
-1. Choose a license and add a LICENSE file to your repository.
 
 2. Add a `CITATION.cff` file to your repository:
    ```yaml
@@ -63,20 +64,25 @@ Don't design your own otherwise compatibility won't be clear.
    date-released: 2021-08-11
    ```
 
-   More about `CITATION.cff` files:
-   - [GitHub now supports CITATION.cff files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
-   - [Web form to create, edit, and validate CITATION.cff files](https://citation-file-format.github.io/cff-initializer-javascript/)
-   - [Video: "How to create a CITATION.cff using cffinit"](https://www.youtube.com/watch?v=zcgLIT5Qd4M)
+More about `CITATION.cff` files:
+- [GitHub now supports CITATION.cff files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
+- [Web form to create, edit, and validate CITATION.cff files](https://citation-file-format.github.io/cff-initializer-javascript/)
+- [Video: "How to create a CITATION.cff using cffinit"](https://www.youtube.com/watch?v=zcgLIT5Qd4M)
 
-3. We can make our code persistent and citable following
-   [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
+
+## Sharing your work
+
+Is it enough to make the code public for the code to remain findable and accessible?
+- No. Because nothing prevents me from deleting my GitHub repository or rewriting the Git history and we have no guarantee that GitHub will still be around in 10 years.
+- Make your code citable and persistent: Get a persistent identifier (PID) such as Digital Object Identifier/DOI in addition to sharing the code publicly, by using services like Zenodo.
+
+We can then also make our code persistent and citable following [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
 
 
 ## Where to explore more
 
 - Presentation slides "Practical software licensing" (R. Bast): <https://doi.org/10.5281/zenodo.11554001>
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/)
-- [UiT research software licensing guide (draft)](https://research-software.uit.no/blog/2023-software-licensing-guide/)
 - [Research institution policies to support research software (compiled by the Research Software Alliance)](https://www.researchsoft.org/software-policies/)
 - More [reading material](https://coderefinery.github.io/social-coding/software-licensing/#great-resources)
 
@@ -91,11 +97,19 @@ As a backup, check out the widely used MIT license.
 
 :::
 
-:::{exercise} Exercise Sharing-2: CITATION.cff and Zenodo sandbox
+:::{exercise} Exercise Sharing-2: Sharing citation information 
 
 In this exercise you can practice adding a `CITATION.cff` file to your own project.
 
-We will then practice getting a DOI using the [Zenodo
+Go to your GitHub repository from "Exercise Git-1", in the GitHub web interface, click `add file` > `create new file` and name it `CITATION.cff`, a blue box should appear above the name, click `ìnsert example`. Explore the options and fill it with your info.
+
+You may also explore other tools like [cff initializer](https://citation-file-format.github.io/cff-initializer-javascript/#/).
+
+:::
+
+:::{exercise} Exercise Sharing-3: Get a "dummy" DOI for your code
+
+You can now practice getting a DOI using the [Zenodo
 sandbox](https://sandbox.zenodo.org).  We use here the Zenodo sandbox and not
 the "real" Zenodo, since we are only practicing. On the "real" Zenodo a record
 with a DOI cannot be deleted (this is the point of making it persistent).
@@ -107,7 +121,7 @@ How to get a DOI using the [Zenodo sandbox](https://sandbox.zenodo.org):
   to create a GitHub release and get a DOI.
 :::
 
-:::{exercise} Exercise Sharing-3: What constitutes derivative work?
+:::{exercise} Exercise Sharing-4: What constitutes derivative work?
 
 Which of these are derivative works?  Also reflect/discuss how this affects the
 choice of license.
@@ -128,7 +142,7 @@ choice of license.
 ```
 :::
 
-:::{exercise} Exercise Sharing-4: Licensing situations
+:::{exercise} Exercise Sharing-5: Licensing situations
 
 Consider some common licensing situations. If you are part of an exercise
 group, discuss these with others:
@@ -156,6 +170,24 @@ group, discuss these with others:
 :::
 
 
+## Additional optional exercise
+
+::::{exercise} Exercise Additional-sharing: You find a useful code online...
+
+Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+
+What can you do with the code as is?
+
+
+:::{solution}
+Currently the project does not include a LICENSE file, which means you should probably stay clear of the tool. Best would be to ask the author to add a license to clarfify the legal situation, for example via issue.
+:::
+
+::::
+
 :::{keypoints}
-TODO
+- Without a license, others can't legally use or modify your code.
+- Use a standard license to ensure compatibility.
+- A license may let you reuse your own code in the future.
+- Add a LICENSE and CITATION.cff file to make your code citable and shareable.
 :::
