@@ -421,13 +421,13 @@ that you .emph[know your dependencies]!
 
 ## Dependencies - kitchen analogy
 
+.center[
 <img src="img/kitchen/libraries.png"
      alt="Kitchen with few open cooking books"
      style="height: 250px;" />
 
 .cite[Midjourney, CC-BY-NC 4.0]
-
-<br>
+]
 
 - Software <-> recipe
 
@@ -438,6 +438,7 @@ that you .emph[know your dependencies]!
 ---
 
 .left-column50[
+<br>
 <img src="img/docker-meme.jpg"
      alt="He said, then we will ship your machine. And that's how Docker was born."
      style="height: 450px;" />

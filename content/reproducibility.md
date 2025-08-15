@@ -293,7 +293,7 @@ No, since, except for Python version, no version numbers are defined, this means
 
 ## What if we need to run many similar calculations?
 
-It all started relatively simple:
+With our example, it all started relatively simple:
 ```bash
 python generate-data.py --num-planets 100 --output-file initial.csv
 
@@ -373,10 +373,6 @@ In this situation we need a **workflow/pipeline** management tool.
 - [Nextflow](https://www.nextflow.io/)
 - There are many more workflow/pipeline
   tools and frameworks. **Do not invent your own!**
-
-
-
-
 
 
 :::{keypoints}
