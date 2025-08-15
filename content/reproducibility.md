@@ -56,6 +56,35 @@ Install dependencies into **isolated environments**:
 - [Ten simple rules for writing Dockerfiles for reproducible data science](https://doi.org/10.1371/journal.pcbi.1008316)
 - [Computing environment reproducibility](https://doi.org/10.5281/zenodo.8089471)
 
+## Dependencies for compiled languages
+
+Programs written in compiled languages such as C, C++, and Fortran
+often depend on one or more libraries. For instance, scientific codes for
+numerical simulations often make use of libraries for linear algebra,
+random number generation, and fast Fourier transforms.
+- Some of the common libraries are established for long and have a very stable application programming interface.
+- Other libraries are more specific and developed and used only for a single or few applications.
+- The common libraries are often preinstalled or available via package managers. For a compute cluster,
+installations of libraries are often maintained by staff.
+
+The dependencies of an application code on libraries can be specified
+- in a makefile or makefile.include,
+- in CMakeLists.txt for use with the CMake build system,
+- in easyconfig configuration files for the EasyBuild system or spack.yaml for the Spack build system.
+
+A particular situation is when building and running code on large clusters. With a large pool
+of users comes large number of programs and libraries. This needs to be managed to avoid interference.
+A common solution is to use so called module systems to selectively activate/deactive the
+programs and libraries that are of relevance. Updates of libraries need to be made with caution
+as they potentially can break the functionality of large number of programs.
+
+## Where to explore more
+
+- [Build systems course (2024)](https://github.com/PDC-support/build-systems-course)
+- [CMake build system](https://cmake.org/)
+- [EasyBuild build and installation framework](https://easybuild.io/)
+- [Spack package manager](https://spack.io/)
+
 
 ## Exercises
 
@@ -257,7 +286,7 @@ You find the environment.yml. Will you get the same environment now, that someon
 
 
 :::{solution}
-No, since, except for Python version, no version numbers are defined. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.
+No, since, except for Python version, no version numbers are defined, this means a tool like conda will get you the latest available version. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.
 :::
 
 # Automation and reproducible workflows
@@ -345,37 +374,9 @@ In this situation we need a **workflow/pipeline** management tool.
 - There are many more workflow/pipeline
   tools and frameworks. **Do not invent your own!**
 
-## Dependencies for compiled languages
-
-Programs written in compiled languages such as C, C++, and Fortran
-often depend on one or more libraries. For instance, scientific codes for
-numerical simulations often make use of libraries for linear algebra,
-random number generation, and fast Fourier transforms.
-- Some of the common libraries are established for long and have a very stable application programming interface.
-- Other libraries are more specific and developed and used only for a single or few applications.
-- The common libraries are often preinstalled or available via package managers. For a compute cluster,
-installations of libraries are often maintained by staff.
-
-The dependencies of an application code on libraries can be specified
-- in a makefile or makefile.include,
-- in CMakeLists.txt for use with the CMake build system,
-- in easyconfig configuration files for the EasyBuild system or spack.yaml for the Spack build system.
-
-A particular situation is when building and running code on large clusters. With a large pool
-of users comes large number of programs and libraries. This needs to be managed to avoid interference.
-A common solution is to use so called module systems to selectively activate/deactive the
-programs and libraries that are of relevance. Updates of libraries need to be made with caution
-as they potentially can break the functionality of large number of programs.
-
-## Where to explore more
-
-- [Build systems course (2024)](https://github.com/PDC-support/build-systems-course)
-- [CMake build system](https://cmake.org/)
-- [EasyBuild build and installation framework](https://easybuild.io/)
-- [Spack package manager](https://spack.io/)
 
 
-::::
+
 
 
 :::{keypoints}

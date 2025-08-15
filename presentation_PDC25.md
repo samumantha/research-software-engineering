@@ -404,7 +404,9 @@ class: middle, center, inverse
 
 
 **Conda, Anaconda, pip, virtualenv, Pipenv, pyenv, Poetry, rye, requirements.txt,
-environment.yml, renv**, ...
+environment.yml, renv, makefile, CMakeLists.txt, easyconfig, spack.yml**, are related to package and environment management.
+
+They (alone or in combination) help to...
 - Define dependencies
 - .emph[Communicate dependencies]
 - Install these dependencies
