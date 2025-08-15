@@ -8,12 +8,15 @@
 - 10 min teaching/discussion
 ```
 
-```{figure} /img/reproducibility.jpg
+
+:::{figure} img/reproducibility.jpg
 :alt: "A person showing another person what steps to take to make their data research reproducible. There is a path with several steps- Here is my data - Here are my tools - Here is my code - Here are my results"
 :width: 100%
-```
+:class: with-border
 
 [The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: <https://zenodo.org/records/13882307>]
+:::
+
 
 ## This lesson is all about reproducibility - from a computational perspective
 

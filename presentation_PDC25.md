@@ -896,7 +896,7 @@ class: middle, inverse
 
 ---
 
-Part 6/6 - Wrap up - 10 min
+## Part 6/6 - Wrap up - 10 min
 
 ---
 
