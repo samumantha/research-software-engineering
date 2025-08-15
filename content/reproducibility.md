@@ -11,7 +11,7 @@
 :::
 
 
-# It all starts with a good directory structure ...
+## It all starts with a good directory structure ...
 
 ```
 project_name/
@@ -49,7 +49,7 @@ Install dependencies into **isolated environments**:
 - Don't install dependencies globally for all projects.
 - Install them **from a file** which documents them at the same time.
 
-## Where to explore more
+### Where to explore more
 
 - [Reproducible research](https://coderefinery.github.io/reproducible-research/)
 - [The Turing Way: Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html)
@@ -78,7 +78,7 @@ A common solution is to use so called module systems to selectively activate/dea
 programs and libraries that are of relevance. Updates of libraries need to be made with caution
 as they potentially can break the functionality of large number of programs.
 
-## Where to explore more
+### Where to explore more
 
 - [Build systems course (2024)](https://github.com/PDC-support/build-systems-course)
 - [CMake build system](https://cmake.org/)
@@ -276,7 +276,7 @@ commit hashes or Git tags.
 ```
 :::
 
-## Additional optional exercise
+### Additional optional exercise
 
 ::::{exercise} Exercise Additional-repro: You find a useful code online...
 
@@ -290,9 +290,9 @@ No, since, except for Python version, no version numbers are defined, this means
 :::
 ::::
 
-# Automation and reproducible workflows
+## Automation and reproducible workflows
 
-## What if we need to run many similar calculations?
+### What if we need to run many similar calculations?
 
 With our example, it all started relatively simple:
 ```bash
@@ -314,7 +314,7 @@ But now we want to run this for **different numbers of planets**:
 One possible solution:
 ```{code-block} bash
 ---
-emphasize-lines: 3,4,14,15
+emphasize-lines: 3,4,7,12
 ---
 #!/usr/bin/env bash
 

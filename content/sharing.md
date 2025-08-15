@@ -74,7 +74,7 @@ More about `CITATION.cff` files:
 
 Is it enough to make the code public for the code to remain findable and accessible?
 - No. Because nothing prevents me from deleting my GitHub repository or rewriting the Git history and we have no guarantee that GitHub will still be around in 10 years.
-- Make your code citable and persistent: Get a persistent identifier (PID) such as Digital Object Identifier/DOI in addition to sharing the code publicly, by using services like Zenodo.
+- Make your code citable and persistent: Get a persistent identifier (PID) such as Digital Object Identifier/DOI in addition to sharing the code publicly, by using services like [Zenodo](https://zenodo.org/).
 
 We can then also make our code persistent and citable following [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
 
@@ -107,19 +107,7 @@ You may also explore other tools like [cff initializer](https://citation-file-fo
 
 :::
 
-:::{exercise} Exercise Sharing-3: Get a "dummy" DOI for your code
 
-You can now practice getting a DOI using the [Zenodo
-sandbox](https://sandbox.zenodo.org).  We use here the Zenodo sandbox and not
-the "real" Zenodo, since we are only practicing. On the "real" Zenodo a record
-with a DOI cannot be deleted (this is the point of making it persistent).
-
-How to get a DOI using the [Zenodo sandbox](https://sandbox.zenodo.org):
-- Log into the [Zenodo sandbox](https://sandbox.zenodo.org) using
-  GitHub.
-- Follow [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
-  to create a GitHub release and get a DOI.
-:::
 
 :::{exercise} Exercise Sharing-4: What constitutes derivative work?
 
@@ -169,6 +157,19 @@ group, discuss these with others:
 ```
 :::
 
+:::{exercise} Exercise Sharing-3: Get a "dummy" DOI for your code
+
+You can now practice getting a DOI using the [Zenodo
+sandbox](https://sandbox.zenodo.org).  We use here the Zenodo sandbox and not
+the "real" Zenodo, since we are only practicing. On the "real" Zenodo a record
+with a DOI cannot be deleted (this is the point of making it persistent).
+
+How to get a DOI using the [Zenodo sandbox](https://sandbox.zenodo.org):
+- Log into the [Zenodo sandbox](https://sandbox.zenodo.org) using
+  GitHub.
+- Follow [these steps](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+  to create a GitHub release and get a DOI.
+:::
 
 ## Additional optional exercise
 

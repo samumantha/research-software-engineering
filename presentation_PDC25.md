@@ -332,9 +332,9 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 class: middle, inverse
 
-Exercises I - 20 min
+## Exercises I - 20 min
 
-TODO:link
+[Version control exercises](https://samumantha.github.io/research-software-engineering/version-control/#exercises)
 
 ---
 
@@ -437,9 +437,11 @@ that you .emph[know your dependencies]!
 
 ---
 
-## Small exercise: Discuss with your neighbor
+class: middle, inverse
 
-<https://samumantha.github.io/research-software-engineering/reproducibility/#exercises>
+## Small exercise:
+
+[Reproducibility exercise](https://samumantha.github.io/research-software-engineering/reproducibility/#exercises)
 
 ---
 
@@ -500,18 +502,18 @@ Inspiration and where to find more:
 
 ---
 
-## Why? &#128151;&#9993;&#65039; to your future self
+## Why? - &#128151;&#9993;&#65039; to your future self
 
 <br>
 
 
-- .emph[You] will probably use your code in the future and may forget details.
+- .emph[You] will probably use your code in the future and may forget details
 
-- You may want .emph[others] to use your code (almost impossible without documentation).
+- You may want .emph[others] to use your code (almost impossible without documentation)
 
-- You may want others to contribute to the code.
+- You may want others to contribute to the code
 
-- Time is limited - let the documentation answer FAQs.
+- Time is limited - let the documentation answer FAQs
 
 ---
 
@@ -588,29 +590,15 @@ print(kelvin_to_celsius.__doc__)
 
 ---
 
-## README - Checklist
-
-- .emph[Purpose]
-- Installation instructions
-- Dependencies and their versions or version ranges
-- .emph[Copy-paste-able example to get started]
-- Tutorials covering key functionality
-- Reference documentation (e.g. API) covering all functionality
-- How do you want to be asked questions (mailing list or forum or chat or issue tracker)
-- Possibly a FAQ section
-- Authors
-- .emph[Recommended citation]
-- License
-- Contribution guide
-
-See also[JOSS review checklist](https://joss.readthedocs.io/en/latest/review_checklist.html)
-
----
-
-
-## Often a README is enough (first impression!)
+## README provides the first impression
 
 .left-column50[
+<img src="img/readme.png"
+     alt="Screenshot of a GitHub repo that renders README.md"
+     style="width: 100%" />
+]
+
+.right-column50[
 ```markdown
 # Project title
 
@@ -643,11 +631,24 @@ Tutorials covering key functionality.
 ```
 ]
 
-.right-column50[
-<img src="img/readme.png"
-     alt="Screenshot of a GitHub repo that renders README.md"
-     style="width: 100%" />
-]
+---
+
+## README - Checklist
+
+- .emph[Purpose]
+- Installation instructions
+- Dependencies and their versions or version ranges
+- .emph[Copy-paste-able example to get started]
+- Tutorials covering key functionality
+- Reference documentation (e.g. API) covering all functionality
+- How do you want to be asked questions (mailing list or forum or chat or issue tracker)
+- Possibly a FAQ section
+- Authors
+- .emph[Recommended citation]
+- License
+- Contribution guide
+
+See also [JOSS review checklist](https://joss.readthedocs.io/en/latest/review_checklist.html)
 
 ---
 
@@ -682,10 +683,9 @@ Tutorials covering key functionality.
 
 class: middle, inverse
 
-Exercises II - 20 min
+## Exercises II - 20 min
 
-TODO:link
-
+[Documentation Exercises](https://samumantha.github.io/research-software-engineering/documentation/#exercises)
 
 ---
 
@@ -710,29 +710,35 @@ class: middle, inverse
 # &#127803;
 
 Inspiration and where to find more:
-- [UiT research software licensing guide (draft)](https://research-software.uit.no/blog/2023-software-licensing-guide/)
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/) by [CodeRefinery](https://coderefinery.org/)
+- [Practical software licensing slides by Radovan Bast](https://zenodo.org/records/14004158)
+- [UiT research software licensing guide (draft)](https://research-software.uit.no/blog/2023-software-licensing-guide/)
 
 ---
 
 # Why software licenses matter
 
-- .emph[You find some great code or data] that you want to reuse for your own
-  publication (good for the original author: you will cite them and maybe other
-  people who cite you will cite them).
+You find some great code that you want to reuse for your own publication.
 
-- You need to .emph[modify the code] a little bit, or you remix the data a bit.
+- This is good for the original author - you will cite them. Maybe other people who cite you will cite them.
 
-- When it comes time to publish, you realize there is .emph[no license].
+- You modify and remix the code.
 
+- Two years later ... &#8987;
 
-### Now we have a problem:
+- Time to publish: You realize **there is no license to the original work** &#128561;
 
-- You manage to **publish the paper without the software/data** but others cannot
-  build on your software and data and
-  you don't get as many citations as you could.
-- Or, you **cannot publish it at all** if the journal requires that papers should
-  come with data and software so that they are reproducible.
+---
+
+# Now we have a problem
+
+### &#128556; "Best" case: You manage to publish the paper without the software/data
+
+Others cannot build on your software and data.
+
+### &#128561; Worst case: You cannot publish it at all
+
+Journal requires that papers should come with data and software so that they are reproducible.
 
 ---
 
@@ -741,7 +747,7 @@ Inspiration and where to find more:
 
 <img src="img/ai/field.png"
      alt="Generated image of an empty field"
-     style="height: 150px;" />
+     style="height: 200px;" />
 
 .cite[Midjourney, CC-BY-NC 4.0]
 
@@ -760,7 +766,7 @@ Inspiration and where to find more:
 
 <img src="img/hundertwasserhaus.jpg"
      alt="Photo of Hunderwasserhaus in Vienna"
-     style="height: 150px;" />
+     style="height: 200px;" />
 
 .cite[C.Stadler/Bwag, CC-BY-SA 4.0]
 
@@ -775,7 +781,7 @@ Inspiration and where to find more:
 
 ---
 
-## Is your work .emph[derivative work] or not?
+## Is your work derivative work or not?
 
 .left-column50[
 <img src="img/license-models.png"
@@ -800,7 +806,7 @@ Inspiration and where to find more:
   [license texts](https://reuse.software/faq/#license-templates).
 - On top of each file add and adapt
   the following header ([more examples](https://reuse.software/faq/)):
-  ```python
+  ```bash 
   # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
   #
   # SPDX-License-Identifier: MIT
@@ -855,8 +861,6 @@ date-released: 2021-08-11
 
 # Sharing and reusing - Great resources
 
-- Guide from the Aalto University in Finland: ["Opening your Software at Aalto University"](https://www.aalto.fi/en/open-science-and-research/opening-your-software-at-aalto-university)
-
 - [Joinup Licensing Assistant - Find and compare software licenses](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses)
 
 - [Joinup Licensing Assistant - Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)
@@ -867,13 +871,15 @@ date-released: 2021-08-11
 
 - [License Selector](https://ufal.github.io/public-license-selector/)
 
+- [Research institution policies to support research software (compiled by the Research Software Alliance)](https://www.researchsoft.org/software-policies/)
+
 ---
 
 class: middle, inverse
 
-Exercises III - 20 min
+## Exercises III - 20 min
 
-TODO:link
+[Sharing and reusing exercises](https://samumantha.github.io/research-software-engineering/sharing/)
 
 ---
 
@@ -890,7 +896,7 @@ Part 6 - Wrap up - 10 min
 ---
 
 
-# Conclusions/recommendations
+# Recommendations
 
 ## It's about communicating!
 
@@ -904,9 +910,17 @@ Part 6 - Wrap up - 10 min
 
 - Make your code/script/notebook citable and give it a license
 
+<br>
+
+.quote[Good enough is better than perfect!]
+
+.quote[Spending a thought on these topics now may make your life easer in the future.]
+
 ---
 
 ## What we did not talk about but is important 
+
+<br>
 
 - Containers (operating system and tools within one file)
 
@@ -914,7 +928,7 @@ Part 6 - Wrap up - 10 min
 
 - Modular code development
 
--> Come to [CodeRefinery workshop](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
+-> Come to [CodeRefinery workshop in September/October](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
 
 ---
 

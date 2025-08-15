@@ -20,8 +20,6 @@
 - You may want others to use your code or contribute
   (almost impossible without documentation).
 
-
-
 ## In-code documentation
 
 Docstrings can do a bit more than just comments:
@@ -120,35 +118,7 @@ See also the
 
 ## Exercises
 
-````{exercise} Documentation-1: Comments
-  Let's take a look at two example comments (comments in Python start with `#`):
-
-  **Comment A**
-  ```python
-  # now we check if temperature is below -50
-  if temperature < -50:
-      print("ERROR: temperature is too low")
-  ```
-
-  **Comment B**
-  ```python
-  # we regard temperatures below -50 degrees as measurement errors
-  if temperature < -50:
-      print("ERROR: temperature is too low")
-  ```
-  Which of these comments is more useful? Can you explain why?
-
-  ```{solution} Solution
-  - Comment A describes **what** happens in this piece of code. This can be
-    useful for somebody who has never seen Python or a program, but for somebody
-    who has, it can feel like a redundant commentary.
-
-  - Comment B is probably more useful as it describes **why** this piece of code
-    is there, i.e. its **purpose**.
-  ```
-````
-
-`````{exercise} Documentation-2a: Sphinx
+`````{exercise} Documentation-1a: Sphinx
 
 Our goal in this episode is to build HTML pages locally on our computers.
 
@@ -359,7 +329,7 @@ to have the Read the Docs look).
 
 ````` 
 
-`````{exercise} Documentation-2b: Add more content to your example Sphinx documentation
+`````{exercise} Documentation-1b: Add more content to your example Sphinx documentation
 
 1. Add a entry below `some-feature.md` labeled `another-feature.md` (or a better name) to the `index.rst` file.
 2. Create a file `another-feature.md` in the same directory as the `index.rst` file.
@@ -443,13 +413,19 @@ int main()
 
 Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
 
-Where do you look for information on how to install, run the code? Can you find all needed information? 
-
+- Where do you look for information on how to install, run the code? Can you find all needed information? 
+- If this code is really useful for your work, but you do not understand how to use it, how could you find out or ask for more?
 
 
 :::{solution}
-In the README. 
-Sections are there but it seems to be a work in progress and many are not filled with information. You could ask the author to add more information via issue.
+First you look for a README; if further documentation is available, it is usually mentioned in the README. 
+Sections are there but it seems to be a work in progress and many are not filled with useful information. To find out more you could create an issue, asking for more information. Feel free to send issues suggesting improvements to the repository or asking for clarifications! You may also try setting up the environment and try running the code on your computer.  
+
+:::{figure} img/issue.png
+:alt: Where to find the issues tab in GitHub
+:width: 100%
+:class: with-border
+:::
 :::
 
 ::::

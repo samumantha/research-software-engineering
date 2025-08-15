@@ -417,7 +417,7 @@ Situation: You found a tool on GitHub that you would like to use: https://github
 - What kind of information would you like to find?
 
 :::{solution}
-Start by looking at the README. Let's talk about it more in the next episode!
+Start by looking at the README. Let's talk about it more in the documentation session!
 :::
 
 ::::

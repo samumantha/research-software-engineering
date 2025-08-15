@@ -54,7 +54,6 @@ However, you will not always need all of them. As with so many things, it depend
 
 ## Important for every project
 
-
 - Clear file structure for your project
 - Record your workflow and write it down as documentation or in a script file.
 - Create a dependency list and keep it updated, optimally in an environment file
@@ -67,7 +66,6 @@ However, you will not always need all of them. As with so many things, it depend
 - [The Turing Way handbook to reproducible, ethical and collaborative data science](https://doi.org/10.5281/zenodo.3233853)
 - [Reproducible research policies and software/data management in scientific computing journals: a survey, discussion, and perspectives](https://doi.org/10.3389/fcomp.2024.1491823)
 - ...
-
 
 
 ```{keypoints}
