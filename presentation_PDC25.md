@@ -2,9 +2,7 @@ class: center, middle, gray-background
 
 # Research software engineering
 
-## Samantha Wittke 
-
-### CSC - IT Center for Science
+## Samantha Wittke (CSC - IT Center for Science)
 
 <img src="img/csc.png" style="height: 140px;"/>
 <img src="img/coderefinery.png" style="height: 140px;"/>
@@ -17,7 +15,7 @@ Link to these slides: TODO
 
 ---
 
-# Part 1 - 15 min
+# Part 1/6 - Welcome - 15 min
 
 - About us
 - Why are we talking about this?
@@ -30,11 +28,12 @@ Link to these slides: TODO
 
 # About us
 
-
+.left-column50[
 <br>
 Johan you already know :)
+]
 
-
+.right-column50[
 <br>
 
 Samantha: 
@@ -45,7 +44,7 @@ Samantha:
 - 2025 fellow of the Software Sustainability institute - community building around research software in Nordics
 - Leading the
   [CodeRefinery project](https://coderefinery.org).
-
+]
 
 ---
 
@@ -119,7 +118,7 @@ live-streamed, recorded, archived asynchronous Q&A in collaborative document
 
 ---
 
-# [Topics of today](https://coderefinery.github.io/research-software-engineering/)
+# Topics of today
 
 Lectures and exercises: 
 
@@ -137,10 +136,16 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 
 ## Exercises - Choose your own adventure
 
-.quote[Each episode has exercises or something to think about in the [materials](https://samumantha.github.io/research-software-engineering/).  There are .emph[too many]
-exercises to complete during the workshop. Please start with the ones that are .emph[most
-relevant to you and your work].  Some tasks provide a 
-possibility to .emph[work in pairs].]
+- Each episode has exercises or something to think about in the [materials](https://samumantha.github.io/research-software-engineering/). 
+
+- There are .emph[too many] exercises to complete during the workshop. 
+
+- Please start with the ones that are .emph[most
+relevant] to you and your work. 
+
+- Some tasks provide a possibility to .emph[work in pairs].
+
+<br>
 
 Link to exercises: <https://samumantha.github.io/research-software-engineering/>
 
@@ -162,15 +167,13 @@ Link to exercises: <https://samumantha.github.io/research-software-engineering/>
 
 - Some exercises link to it
 
-<br>
+]
 
 Link to example project: <https://github.com/coderefinery/planets>
 
-]
-
 ---
 
-# Part 2 - 20 min
+## Part 2/6 Version Control - 20 min
 
 - Find more info
 - Motivation
@@ -308,9 +311,13 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 
 - Commits = snapshots with author, date, message, and ID
+
 - Branches = parallel universes for safe experimentation
+
 - Annotate code to track changes line by line
+
 - Collaboration: fork, clone, review, share, discuss
+
 - Code review via pull or merge requests
 
 ---
@@ -318,14 +325,20 @@ can support merging them together.  Image created using <https://gopherize.me/>
 ## Note: Git can support more than code!
 
 <br>
-<br>
+
 
 - Software (this is how it started but Git/GitHub can track a lot more)
+
 - Scripts
+
 - Documents (plain text files much better suitable than Word documents, this material and slides are tracked using Git)
+
 - Manuscripts (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
+
 - Configuration files
+
 - Website sources : [Source for CodeRefinery website](https://github.com/coderefinery/coderefinery.org/)
+
 - Data (see also [git-annex](https://scicomp.aalto.fi/scicomp/git-annex/), [git LFS](https://git-lfs.com/))
 
 ---
@@ -338,12 +351,12 @@ class: middle, inverse
 
 ---
 
-Part 3 - 20 min
+## Part 3/6 - 20 min
 
 - Reproducibility
-- directory structure
-- recording dependencies
-- recording computational steps
+- Directory structure
+- Recording dependencies
+- Recording computational steps
 
 ---
 
@@ -477,16 +490,15 @@ class: middle, inverse
 
 ---
 
-Part 4 - 20 min
+## Part 4/6 - Documentation - 20 min
 
-Documentation
 - Where to find more
 - Why?
 - Checklist
 - Comments
-- in code
+- In-code
 - README
-- Growing out of readme
+- Growing out of README
 
 ---
 
@@ -689,17 +701,15 @@ class: middle, inverse
 
 ---
 
-Part 5 - 10 min
-
-Sharing and reusing
+## Part 5/6 - Sharing and reusing - 10 min
 
 - Where to learn more
 - Why it matters
 - Beginning and later
 - Derivative
-- in practice
-- citation
-- reusing
+- In practice
+- Citation
+- Reusing
 
 ---
 
@@ -732,9 +742,13 @@ You find some great code that you want to reuse for your own publication.
 
 # Now we have a problem
 
+<br>
+
 ### &#128556; "Best" case: You manage to publish the paper without the software/data
 
 Others cannot build on your software and data.
+
+<br>
 
 ### &#128561; Worst case: You cannot publish it at all
 
@@ -751,7 +765,6 @@ Journal requires that papers should come with data and software so that they are
 
 .cite[Midjourney, CC-BY-NC 4.0]
 
-<br>
 
 - License does not seem important
 - Easy to change (*)
@@ -770,7 +783,7 @@ Journal requires that papers should come with data and software so that they are
 
 .cite[C.Stadler/Bwag, CC-BY-SA 4.0]
 
-<br>
+
 
 - Can be important
 - Especially when combining codes or organizations
@@ -883,7 +896,7 @@ class: middle, inverse
 
 ---
 
-Part 6 - Wrap up - 10 min
+Part 6/6 - Wrap up - 10 min
 
 ---
 
@@ -891,16 +904,14 @@ Part 6 - Wrap up - 10 min
 
 <img src="img/reproducibility.jpg"
      alt="A person showing another person what steps to take to make their data research reproducible. There is a path with several steps- Here is my data - Here are my tools - Here is my code - Here are my results"
-     style="height: 80%;" />
+     style="height: 400px;" />
 
-The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307
+.cite[The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307]
 
 ---
 
 
-# Recommendations
-
-## It's about communicating!
+# Recommendations - It's about communicating!
 
 - Track your code with Git
 
@@ -912,7 +923,7 @@ The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence
 
 - Make your code/script/notebook citable and give it a license
 
-<br>
+
 
 .quote[Good enough is better than perfect!]
 
@@ -954,12 +965,12 @@ class: center, middle, inverse
 ## Addition: Containers- kitchen analogy
 
 .left-column50[
-<br>
+
 <img src="img/docker-meme.jpg"
      alt="He said, then we will ship your machine. And that's how Docker was born."
      style="height: 450px;" />
 
-From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)
+.cite[From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)]
 ]
 
 .right-column50[
