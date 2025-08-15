@@ -1,11 +1,10 @@
 # Version control and code review
 
 :::{objectives}
-- Browse **commits** and **branches** of a Git repository.
-- Remember that commits are like **snapshots** of the repository at a certain
-  point in time.
-- Know the difference between **Git** (something that tracks changes) and
-  **GitHub/GitLab** (a platform to host Git repositories).
+- Understand what Git and GitHub can be useful for
+- Understand that version control is not only for code
+- Discover multiple ways of putting your own work under version control
+
 :::
 
 :::{instructor-note}
@@ -36,6 +35,7 @@ You don't know what you changed.**
 **Problem: You and your colleague want to work on the same code at the
 same time.**
 
+Possibilities: 
 
 - **Roll-back**: you can always go back to a previous version and compare
 
@@ -44,17 +44,17 @@ same time.**
   - Different people can work on the same code/project without interfering
   - You can experiment with an idea and discard it if it turns out to be a bad idea
 
-:::{figure} img/gopher/gophers.png
+- **Collaboration**: review, compare, share, discuss
+
+- [Example network graph](https://github.com/coderefinery/git-intro/network)
+
+:::{figure} img/gophers.png
 :alt: Branching explained with a gopher
 :width: 100%
 
 Image created using <https://gopherize.me/>
 ([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
 :::
-
-- **Collaboration**: review, compare, share, discuss
-
-- [Example network graph](https://github.com/coderefinery/git-intro/network)
 
 
 ## Reproducibility
@@ -88,6 +88,10 @@ Example of a git-annotated code with code and history side-by-side.
 - Configuration files
 - Website sources
 - Data
+
+## Git vs GitHub
+
+**Git** is a tool that tracks changes , while **GitHub/GitLab/CodeBerg** provide a platform to host and collaborate on Git repositories.
 
 ## Demonstration
 
@@ -409,7 +413,8 @@ It was this commit:
 
 Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
 
-How would you go about trying it out? (You do not have to actually do it, but can just take some notes)
+- How would you go about trying it out? (You do not have to actually do it, but can just take some notes)
+- What kind of information would you like to find?
 
 :::{solution}
 Start by looking at the README. Let's talk about it more in the next episode!
@@ -420,5 +425,5 @@ Start by looking at the README. Let's talk about it more in the next episode!
 :::{keypoints}
 - Version control helps track changes, avoid confusion over file versions, and recover from mistakes or data loss.
 - It enables multiple users to work simultaneously without conflicts.
-
+- You can work with Git on your own computer even when not sharing your work online
 :::

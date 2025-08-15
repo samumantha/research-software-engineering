@@ -1,6 +1,6 @@
 class: center, middle, gray-background
 
-# Research software engineering for HPC
+# Research software engineering
 
 ## Samantha Wittke 
 
@@ -30,42 +30,50 @@ Link to these slides: TODO
 
 # About us
 
-.left-column50[
-Johan you already know :)
-]
 
-.right-column50[
+<br>
+Johan you already know :)
+
+
+<br>
 
 Samantha: 
 
-- Geoecology and Geoinformatics background.
-
-- Researcher who writes code
-
-- Training, outreach and collaboration coordination.
-
-- 2025 fellow of the Software Sustainability institute - community building around research software in Nordics. 
-
+- Geoecology and Geoinformatics background
+- Researcher who writes code -> Research Software Engineer
+- Training, outreach and collaboration coordination
+- 2025 fellow of the Software Sustainability institute - community building around research software in Nordics
 - Leading the
-  [CodeRefinery project and community](https://coderefinery.org).
-]
+  [CodeRefinery project](https://coderefinery.org).
+
 
 ---
 
 # What is Research Software Engineering?
 
+<br>
+
 Here it is about all the essential tools which are usually skipped in academic education so everyone can make full use of software, computing, and data with focus on **reusability, reproducibility, and openness**.
 
--> Everything **around programming**, that helps you be more efficient in your work and supports the reusability of your code. 
+<br>
+
+.quote[-> Everything **around programming**, that helps you be more efficient in your work and supports the reusability of your code. ]
 
 ---
 
 # Why are we talking about Research Software Engineering?
 
+<br>
+<br>
+
 - RSE is part of computational research, but not often taught.
+
 - "You don't know what you don't know"
+
 - Working alone, working with others, sharing your work
+
 - Hands-on experience
+
 
 ---
 
@@ -113,7 +121,7 @@ live-streamed, recorded, archived asynchronous Q&A in collaborative document
 
 # [Topics of today](https://coderefinery.github.io/research-software-engineering/)
 
-Lectures and exercises:
+Lectures and exercises: 
 
 - [Version control](https://coderefinery.github.io/research-software-engineering/ xxx /)
 
@@ -127,16 +135,38 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 
 ---
 
+## Exercises - Choose your own adventure
+
+.quote[Each episode has exercises or something to think about in the [materials](https://samumantha.github.io/research-software-engineering/).  There are .emph[too many]
+exercises to complete during the workshop. Please start with the ones that are .emph[most
+relevant to you and your work].  Some tasks provide a 
+possibility to .emph[work in pairs].]
+
+Link to exercises: <https://samumantha.github.io/research-software-engineering/>
+
+---
 
 # Example project: simulating the motion of a number of planets
 
-<img src="img/example_project.png" style="height: 140px;"/>
+.left-column60[
+<img src="img/example_project.png" style="height: 300px;"/>
+]
+
+.right-column40[
 
 - N-body simulation 
-- Written in Python. 
-- No need to understand the code in any detail.
+
+- Written in Python
+
+- No need to understand the code in any detail
+
+- Some exercises link to it
+
+<br>
 
 Link to example project: <https://github.com/coderefinery/planets>
+
+]
 
 ---
 
@@ -200,6 +230,16 @@ Inspiration and where to find more:
 
 ---
 
+## Working on the same basis - on different tasks
+
+<img src="img/gophers.png" style="width: 100%;"/>
+
+What if two people, at the same time, make two different changes?  Git
+can support merging them together.  Image created using <https://gopherize.me/>
+([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
+
+---
+
 ## Features: roll-back, branching, merging, collaboration
 
 - .emph[Roll-back]: you can always go back to a previous version and compare
@@ -207,13 +247,6 @@ Inspiration and where to find more:
 - .emph[Branching and merging]: work on different ideas at the same time
 
 - .emph[Collaboration]: review, compare, share, discuss
-
-
-<img src="img/gophers.png" style="width: 100%;"/>
-
-What if two people, at the same time, make two different changes?  Git
-can support merging them together.  Image created using <https://gopherize.me/>
-([inspiration](https://twitter.com/jay_gee/status/703360688618536960)).
 
 
 ---
@@ -897,3 +930,17 @@ Part 6 - Wrap up - 10 min
 
 -> Come to [CodeRefinery workshop](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
 
+---
+
+class: center, middle, inverse
+
+## Big Thanks to the CodeRefinery team and partners!
+
+<br>
+<br>
+
+<img src="img/coderefinery.png" style="height: 140px;"/>
+
+<br>
+
+<https://coderefinery.org/>

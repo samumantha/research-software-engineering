@@ -8,6 +8,7 @@ or expected that we understand the code in any detail.
 :width: 600
 :::
 
+
 The **big picture** is that the code simulates the motion of a number of
 planets:
 - We can choose the number of planets.
@@ -23,7 +24,7 @@ planets:
 ## Example run
 
 :::{instructor-note}
-The instructor demonstrates running the code on their computer.
+The instructor may demonstrate running the code on their computer.
 :::
 
 The code is written to accept **command-line arguments** to specify the number
