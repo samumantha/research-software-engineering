@@ -288,6 +288,7 @@ You find the environment.yml. Will you get the same environment now, that someon
 :::{solution}
 No, since, except for Python version, no version numbers are defined, this means a tool like conda will get you the latest available version. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.
 :::
+::::
 
 # Automation and reproducible workflows
 
