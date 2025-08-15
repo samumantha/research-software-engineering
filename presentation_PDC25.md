@@ -437,26 +437,9 @@ that you .emph[know your dependencies]!
 
 ---
 
-.left-column50[
-<br>
-<img src="img/docker-meme.jpg"
-     alt="He said, then we will ship your machine. And that's how Docker was born."
-     style="height: 450px;" />
+## Small exercise: Discuss with your neighbor
 
-.cite[From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)]
-]
-
-.right-column50[
-## Containers- kitchen analogy
-- Our codes/scripts <-> cooking recipes
-
-- Container definition files <-> like a blueprint to build a kitchen with all
-  utensils in which the recipe can be prepared.
-
-- Container images <-> example kitchens
-
-- Containers <-> identical factory-built mobile food truck kitchens
-]
+<https://samumantha.github.io/research-software-engineering/reproducibility/#exercises>
 
 ---
 
@@ -947,3 +930,30 @@ class: center, middle, inverse
 <br>
 
 <https://coderefinery.org/>
+
+---
+
+## Containers- kitchen analogy
+
+.left-column50[
+<br>
+<img src="img/docker-meme.jpg"
+     alt="He said, then we will ship your machine. And that's how Docker was born."
+     style="height: 450px;" />
+
+.cite[From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)]
+]
+
+.right-column50[
+
+- Our codes/scripts <-> cooking recipes
+
+- Container definition files <-> like a blueprint to build a kitchen with all
+  utensils in which the recipe can be prepared.
+
+- Container images <-> example kitchens
+
+- Containers <-> identical factory-built mobile food truck kitchens
+]
+
+---
