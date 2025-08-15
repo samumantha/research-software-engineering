@@ -26,6 +26,7 @@ version-control
 reproducibility
 documentation
 sharing
+where-to-go
 ```
 
 :::{admonition} Choose your own adventure
