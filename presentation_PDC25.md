@@ -930,6 +930,8 @@ The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence
 
 - Modular code development
 
+<br>
+
 -> Come to [CodeRefinery workshop in September/October](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
 
 ---
@@ -941,7 +943,7 @@ class: center, middle, inverse
 <br>
 <br>
 
-<img src="img/coderefinery.png" style="height: 140px;"/>
+<img src="img/coderefinery.png" style="height: 300px;"/>
 
 <br>
 
@@ -949,7 +951,7 @@ class: center, middle, inverse
 
 ---
 
-## Containers- kitchen analogy
+## Addition: Containers- kitchen analogy
 
 .left-column50[
 <br>
@@ -957,7 +959,7 @@ class: center, middle, inverse
      alt="He said, then we will ship your machine. And that's how Docker was born."
      style="height: 450px;" />
 
-.cite[From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)]
+From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)
 ]
 
 .right-column50[
@@ -971,5 +973,3 @@ class: center, middle, inverse
 
 - Containers <-> identical factory-built mobile food truck kitchens
 ]
-
----
