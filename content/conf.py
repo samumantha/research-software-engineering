@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath("."))
 project = 'Research software engineering'
 copyright = "CodeRefinery project"
 author = "CodeRefinery project"
-github_user = "coderefinery"
+github_user = "samumantha"
 github_repo_name = "research-software-engineering"  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/"  # with leading and trailing slash

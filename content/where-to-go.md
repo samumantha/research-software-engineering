@@ -54,7 +54,6 @@ This lesson presents a lot of different tools and opportunities for your researc
 However, you will not always need all of them. As with so many things, it depends on your project.
 
 
-
 ## Important for every project
 
 - Clear file structure for your project
