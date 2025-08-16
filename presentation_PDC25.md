@@ -35,7 +35,6 @@ Johan you already know :)
 
 .right-column50[
 <br>
-
 Samantha: 
 
 - Geoecology and Geoinformatics background
@@ -52,7 +51,7 @@ Samantha:
 
 <br>
 
-Here it is about all the essential tools which are usually skipped in academic education so everyone can make full use of software, computing, and data with focus on **reusability, reproducibility, and openness**.
+Here it is about all the essential tools and techniques so everyone can make full use of software, computing, and data with focus on **reusability, reproducibility, and openness**.
 
 <br>
 
@@ -65,7 +64,7 @@ Here it is about all the essential tools which are usually skipped in academic e
 <br>
 <br>
 
-- RSE is part of computational research, but not often taught.
+- RSE is part of computational research, but not often taught
 
 - "You don't know what you don't know"
 
@@ -91,7 +90,7 @@ data/results as part of a publication.
 
 ---
 
-# CodeRefinery
+# CodeRefinery workshop
 
 **Typical format**: 3 half-days + 6 topical sessions, lessons + exercises [twice per
 year](https://coderefinery.org/workshops/upcoming/), online, free,
@@ -138,12 +137,11 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 
 - Each episode has exercises or something to think about in the [materials](https://samumantha.github.io/research-software-engineering/). 
 
-- There are .emph[too many] exercises to complete during the workshop. 
+- There are likely more exercises than time 
 
-- Please start with the ones that are .emph[most
-relevant] to you and your work. 
+- Please start with the ones that are .emph[most relevant] to you and your work
 
-- Some tasks provide a possibility to .emph[work in pairs].
+- Some tasks provide a possibility to .emph[work with your neighbors].
 
 <br>
 
@@ -235,7 +233,7 @@ Inspiration and where to find more:
 
 ## Working on the same basis - on different tasks
 
-<img src="img/gophers.png" style="width: 100%;"/>
+<img src="img/gophers.png" style="width: 80%;"/>
 
 What if two people, at the same time, make two different changes?  Git
 can support merging them together.  Image created using <https://gopherize.me/>
