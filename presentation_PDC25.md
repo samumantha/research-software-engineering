@@ -15,6 +15,8 @@ Link to these slides: TODO
 
 ---
 
+class: middle, center
+
 # Part 1/6 - Welcome - 15 min
 
 - About us
@@ -94,8 +96,6 @@ class: center, middle
 
 ## Do you write research software?
 
-
-
 ---
 
 # CodeRefinery workshop
@@ -141,7 +141,7 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 
 ---
 
-## Exercises 
+## Exercises - hands on
 
 - 3 x 20 min sessions
 
@@ -150,6 +150,8 @@ Longer version of all topics including more exercises can be found in [CodeRefin
 - Please start with the ones that are .emph[most relevant] to you and your work
 
 - Some tasks provide a possibility to .emph[work with your neighbors]
+
+- .emph[Please ask] if something is unclear or you need help (sticky notes)
 
 <br>
 

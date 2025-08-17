@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Research software engineering'
+project = 'Research Software Engineering for you'
 copyright = "CodeRefinery project"
 author = "CodeRefinery project"
 github_user = "samumantha"

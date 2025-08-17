@@ -5,7 +5,7 @@ is a hopefully simple N-body simulation written in Python. It is not important
 or expected that we understand the code in any detail.
 
 :::{video} video/animation.mp4
-:width: 600
+:width: 100%
 :::
 
 
