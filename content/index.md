@@ -1,4 +1,4 @@
-# Research software engineering
+# Research software engineering for you
 
 :::{admonition} Preparation
 - Get a GitHub account ([instructions](https://coderefinery.github.io/installation/github/))

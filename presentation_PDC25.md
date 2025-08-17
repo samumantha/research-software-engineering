@@ -1,6 +1,6 @@
 class: center, middle, gray-background
 
-# Research software engineering
+# Research software engineering for you
 
 ## Samantha Wittke (CSC - IT Center for Science)
 
@@ -40,7 +40,7 @@ Samantha:
 - Geoecology and Geoinformatics background
 - Researcher who writes code -> Research Software Engineer
 - Training, outreach and collaboration coordination
-- 2025 fellow of the Software Sustainability institute - community building around research software in Nordics
+- 2025 fellow of the [Software Sustainability Institute](https://www.software.ac.uk/) - community building around research software in Nordics (see also [Nordic-RSE](https://nordic-rse.org/))
 - Leading the
   [CodeRefinery project](https://coderefinery.org).
 ]
@@ -66,11 +66,11 @@ Here it is about all the essential tools and techniques so everyone can make ful
 
 - RSE is part of computational research, but not often taught
 
+- Useful when working alone, working with others, sharing your work
+
 - "You don't know what you don't know"
 
-- Working alone, working with others, sharing your work
-
-- Hands-on experience
+- Hands-on experience -> integrate into your own workflow
 
 
 ---
@@ -87,6 +87,14 @@ class: center, middle, inverse
 We consider **any code, script, notebook, or file, regardless of size**, as
 "research software" if it is needed to generate, visualize, or reproduce
 data/results as part of a publication.
+
+---
+
+class: center, middle 
+
+## Do you write research software?
+
+
 
 ---
 
@@ -121,27 +129,27 @@ live-streamed, recorded, archived asynchronous Q&A in collaborative document
 
 Lectures and exercises: 
 
-- [Version control](https://coderefinery.github.io/research-software-engineering/ xxx /)
+- [Version control](https://samumantha.github.io/research-software-engineering/version-control/) + Exercises
 
-- [Documentation](https://coderefinery.github.io/research-software-engineering/ xxx /)
+- [Reproducibility](https://samumantha.github.io/research-software-engineering/reproducibility/)
 
-- [Reproducibility](https://coderefinery.github.io/research-software-engineering/ xxx /)
+- [Documentation](https://samumantha.github.io/research-software-engineering/documentation/) + Exercises
 
-- [Sharing and reusing](https://coderefinery.github.io/research-software-engineering/sharing-reusing/)
+- [Sharing and reusing](https://samumantha.github.io/research-software-engineering/sharing/) + Exercises
 
 Longer version of all topics including more exercises can be found in [CodeRefinery lesson materials](https://coderefinery.org/lessons).
 
 ---
 
-## Exercises - Choose your own adventure
+## Exercises 
 
-- Each episode has exercises or something to think about in the [materials](https://samumantha.github.io/research-software-engineering/). 
+- 3 x 20 min sessions
 
-- There are likely more exercises than time 
+- There are likely more exercises than time, don't stress to do them all
 
 - Please start with the ones that are .emph[most relevant] to you and your work
 
-- Some tasks provide a possibility to .emph[work with your neighbors].
+- Some tasks provide a possibility to .emph[work with your neighbors]
 
 <br>
 
@@ -149,7 +157,7 @@ Link to exercises: <https://samumantha.github.io/research-software-engineering/>
 
 ---
 
-# Example project: simulating the motion of a number of planets
+# Example project: Simulating the motion of a number of planets
 
 .left-column60[
 <img src="img/example_project.png" style="height: 300px;"/>
@@ -186,7 +194,7 @@ Link to example project: <https://github.com/coderefinery/planets>
 
 class: middle, inverse
 
-# Version control
+# Version control with git
 
 # &#128220;
 
@@ -196,6 +204,31 @@ Inspiration and where to find more:
 - [Collaborating and sharing using GitHub without command line](https://coderefinery.github.io/github-without-command-line/)
 
 ---
+
+class: middle, center
+
+## Have you worked with version control before?
+
+---
+
+# Git and GitHub
+
+<img src="img/git_github.png" style="width: 400px;"/>
+
+.left-column50[
+
+Git - version control system (track changes)
+
+]
+
+.right-column50[
+
+GitHub, GitLab, Codeberg, ... -  hosting, collaboration and sharing
+
+]
+
+---
+
 
 ## Motivation: Version control is an answer to these questions:
 
@@ -241,18 +274,15 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 ---
 
-## Features: roll-back, branching, merging, collaboration
+## Collaboration through branches or forks
 
-- .emph[Roll-back]: you can always go back to a previous version and compare
-
-- .emph[Branching and merging]: work on different ideas at the same time
-
-- .emph[Collaboration]: review, compare, share, discuss
-
+<img src="img/fork.png"
+     alt="Image that shows the difference of cloning and forking"
+     style="width: 100%">
 
 ---
 
-## Reproducibility ([browse this example online](https://github.com/networkx/networkx/blame/main/networkx/algorithms/boundary.py))
+## Traceability ([browse this example online](https://github.com/networkx/networkx/blame/main/networkx/algorithms/boundary.py))
 
 <img src="img/git-annotate.png"
      alt="Example of a git-annotated code with code and history side-by-side"
@@ -260,10 +290,22 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 ---
 
+## Features
+
+- Through commits you know what changed when and by whom
+
+- .emph[Roll-back]: You can always go back to a previous version and compare
+
+- .emph[Branching and merging]: Work on different ideas at the same time
+
+- .emph[Collaboration]: Review, compare, share, discuss
+
+
+---
 
 ## Talking about code
 
-.quote[Clone the code, go to the file "src/util.rs", and search for "time_iso8601". Oh! But make sure you use the version from August 2023.]
+.quote[Download the code, go to the file "src/util.rs", and search for "time_iso8601". Oh! But make sure you use the version from August 2023.]
 
 
 ### Or I can send you a [permalink](https://github.com/NordicHPC/sonar/blob/75daafc86582feb06299d6a47c82112f39888152/src/util.rs#L40-L44)
@@ -276,13 +318,7 @@ can support merging them together.  Image created using <https://gopherize.me/>
 
 ---
 
-## Collaboration through branches or forks
 
-<img src="img/fork.png"
-     alt="Image that shows the difference of cloning and forking"
-     style="width: 100%">
-
----
 
 ## Code review
 
@@ -291,6 +327,8 @@ can support merging them together.  Image created using <https://gopherize.me/>
      style="width: 80%">
 
 <br>
+
+- Ask for review via pull request 
 
 - Changes are reviewed before they are merged
 
