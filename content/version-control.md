@@ -411,13 +411,14 @@ It was this commit:
 
 ::::{exercise} Exercise Additional-vc: You find a useful code online...
 
-Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+Situation: You found a tool on GitHub that you would like to use: <https://github.com/coderefinery/planets>
 
-- How would you go about trying it out? (You do not have to actually do it, but can just take some notes)
+- How would you go about trying it out? (You do not have to actually do it, but can discuss with your neighbor)
 - What kind of information would you like to find?
 
 :::{solution}
-Start by looking at the README. Let's talk about it more in the documentation session!
+Start by looking at the README (we will talk about this more in the documentation lesson!).
+You can get the code to your computer by `cloning the repository`.
 :::
 
 ::::
