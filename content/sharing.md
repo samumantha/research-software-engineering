@@ -83,7 +83,7 @@ We can then also make our code persistent and citable following [these steps](ht
 
 - Presentation slides "Practical software licensing" (R. Bast): <https://doi.org/10.5281/zenodo.11554001>
 - [Social coding lesson material](https://coderefinery.github.io/social-coding/)
-- [Research institution policies to support research software (compiled by the Research Software Alliance)](https://www.researchsoft.org/software-policies/)
+- [Research institution policies to support research software (compiled by the Research Software Alliance)](https://www.researchsoft.org/resource/software-policies/)
 - More [reading material](https://coderefinery.github.io/social-coding/software-licensing/#great-resources)
 
 

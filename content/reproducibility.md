@@ -45,9 +45,8 @@ Use a **standard way** to list dependencies in your project:
 - Other languages: ...
 
 Install dependencies into **isolated environments**:
-- For each project, create a new environment.
-- Don't install dependencies globally for all projects.
-- Install them **from a file** which documents them at the same time.
+- For each project, create a new environment, including all its dependencies.
+- Collect them **in a file** which documents them at the same time.
 
 ### Where to explore more
 
@@ -370,8 +369,8 @@ In this situation we need a **workflow/pipeline** management tool.
 
 ## Where to explore more
 
-- [Snakemake](https://snakemake.github.io/)
-- [Nextflow](https://www.nextflow.io/)
+- [Snakemake](https://snakemake.github.io/), a framework for reproducible data analysis
+- [Nextflow](https://www.nextflow.io/), a framework for reproducible scientific workflows
 - There are many more workflow/pipeline
   tools and frameworks. **Do not invent your own!**
 
