@@ -385,7 +385,16 @@ class: middle, inverse
 
 [Version control exercises](https://samumantha.github.io/research-software-engineering/version-control/#exercises)
 
+<br>
+
+- Git-1: Create your own GitHub repository
+- Git-2: Archaeology with git
+- Additional-vc: What do you do with a code you find online
+
+
 ---
+
+class: middle, center
 
 ## Part 3/6 - 20 min
 
@@ -443,9 +452,23 @@ project_name/
 
 ---
 
+class: middle, center
+
+## Have you ever been sure your code works… until your colleague runs it?”
+
+---
+
 class: middle, center, inverse
 
 # "it works on my machine &#129335;"
+
+---
+
+### We usually do not start from scratch ...
+
+### ... but build on other tools and packages
+
+.quote[-> We need to communicate what is needed to run our code!]
 
 ---
 
@@ -468,27 +491,21 @@ that you .emph[know your dependencies]!
 
 ---
 
-## Dependencies - kitchen analogy
+## Demonstration
 
-.center[
-<img src="img/kitchen/libraries.png"
-     alt="Kitchen with few open cooking books"
-     style="height: 250px;" />
+<https://github.com/coderefinery/planets>
 
-.cite[Midjourney, CC-BY-NC 4.0]
-]
+<br>
+<br>
 
-- Software <-> recipe
-
-- Data <-> ingredients
-
-- Libraries <-> cooking books/blogs
+- README
+- environment.yml
 
 ---
 
 class: middle, inverse
 
-## Small exercise:
+## Small exercise - discuss with neighbor:
 
 [Reproducibility exercise](https://samumantha.github.io/research-software-engineering/reproducibility/#exercises)
 
@@ -498,25 +515,19 @@ class: middle, inverse
 
 <br>
 
-.left-column60[
+
 Apart from the environment we also need a way to record and .emph[communicate] computational steps:
 
 - **README** (steps written out "in words")
 
 - **Scripts** (typically shell scripts)
 
-- **Notebooks** (Jupyter or R Markdown)
+- **Notebooks** (Jupyter, R Markdown, Pluto)
 
-- **Workflows** (Snakemake, doit, ...)
-]
+- **Workflows** (Snakemake, Nextflow, doit, ...)
 
-.right-column40[
-<img src="img/kitchen/busy.png"
-     alt="Busy kitchen"
-     style="height: 250px;" />
+Workflows become interesting when you want to build .emph[scalable, reliable and reproducible] pipelines.
 
-.cite[Midjourney, CC-BY-NC 4.0]
-]
 
 ---
 
@@ -525,6 +536,8 @@ class: middle, inverse
 # Break - 20 min
 
 ---
+
+class: middle, center
 
 ## Part 4/6 - Documentation - 20 min
 
@@ -542,11 +555,15 @@ class: middle, inverse
 
 # Documentation
 
-# &#128151;&#9993;&#65039; to your future self
-
 Inspiration and where to find more:
 - [Documentation - CodeRefinery lesson material](https://coderefinery.github.io/documentation/) by [CodeRefinery](https://coderefinery.org/)
 - [My short talk on "Documenting code"](https://github.com/samumantha/documentation_example)
+
+---
+
+class: middle, center
+
+## Have you written any kind of code documentation?
 
 ---
 
@@ -567,41 +584,45 @@ Inspiration and where to find more:
 
 ## In-code documentation
 
-Not very useful (more commentary than comment):
+
 ```python
 # now we check if temperature is larger than -50
 if temperature > -50:
     print("ERROR: temperature is too low")
 ```
+-> Not very useful (more commentary than comment)
 
-Keeping zombie code "just in case" (rather use version control):
+
 ```python
 # do not run this code!
 # if temperature > 0:
 #     print("It is warm")
 ```
+-> Keeping zombie code "just in case" (rather use version control)
 
-Emulating version control:
+
 ```python
 # somebody: threshold changed from 0 to 15 on August 5, 2013
 if temperature > 15:
     print("It is warm")
 ```
+-> Emulating version control
 
 ---
 
 ## In-code documentation
 
-More useful (explaining .emph[why]):
+
 ```python
 # we regard temperatures below -50 degrees as measurement errors
 if temperature > -50:
     print("ERROR: temperature is too low")
 ```
+-> More useful : Explaining .emph[why]
 
 ---
 
-## In-code documentation
+## In-code documentation - docstrings
 
 .left-column30[
 - Useful for those who want/need to understand and modify the code
@@ -709,7 +730,7 @@ See also [JOSS review checklist](https://joss.readthedocs.io/en/latest/review_ch
   or
   [R Markdown (.Rmd)](https://rmarkdown.rstudio.com/)
 
-- In the .emph[same repository] as the code -> version control and **reproducibility**
+- In the .emph[same repository] as the code -> reminder to update both, version control and **reproducibility**
 
 - Use one of many tools to build HTML out of md/rst/Rmd:
   [Sphinx](sphinx-doc.org),
@@ -726,6 +747,7 @@ See also [JOSS review checklist](https://joss.readthedocs.io/en/latest/review_ch
 
 - [All CodeRefinery lessons](https://coderefinery.org/lessons/from-coderefinery/)
 - <https://github.com/networkx/networkx>
+- [EODIE - my own project, now continued by others](https://eodie.readthedocs.io/en/latest/)
 
 ---
 
@@ -735,7 +757,14 @@ class: middle, inverse
 
 [Documentation Exercises](https://samumantha.github.io/research-software-engineering/documentation/#exercises)
 
+<br>
+
+- Documentation-1 a+b : Build Documentation webpage from Markdown text with Sphinx
+- Additional-doc: Where to find information
+
 ---
+
+class: middle, center
 
 ## Part 5/6 - Sharing and reusing - 10 min
 
@@ -770,7 +799,7 @@ You find some great code that you want to reuse for your own publication.
 
 - You modify and remix the code.
 
-- Two years later ... &#8987;
+- &#8987; Two years later ... 
 
 - Time to publish: You realize **there is no license to the original work** &#128561;
 
@@ -838,41 +867,24 @@ Journal requires that papers should come with data and software so that they are
      style="height: 400px;" />
 
 .cite[European Union Public Licence (EUPL): guidelines July 2021, <https://data.europa.eu/doi/10.2799/77160>]
+
+Arrows represent compatibility: A -> B: B can reuse A
 ]
 
 .right-column50[
 - .emph[Derivative work]: You have started from an existing code and made changes to
-  it or if you incorporated an existing code into your code
+  it or if you incorporated an existing code into your code, beware the "sticky licenses"
 
 - You have started from scratch: .emph[not derivative work]
 ]
 
 ---
 
-## How do I add a license to my work?
+## Citability
 
-- Create a `LICENSE` file or `LICENSES/` folder in your project which will hold
-  [license texts](https://reuse.software/faq/#license-templates).
-- On top of each file add and adapt
-  the following header ([more examples](https://reuse.software/faq/)):
-  ```bash 
-  # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
-  #
-  # SPDX-License-Identifier: MIT
-  ```
+Provide all information about the code, including its name, current version and authors with the code:
 
-Practical steps for making **changes to an existing project** (with a license
-that allows you to do so):
-- .emph[Fork] (copy) the project.
-- .emph[Summarize your changes] in file headers and bigger-picture changes in the README.
-- Some licenses are more .emph[permissive] (you can keep your changes private) but some licenses
-  require you to publish the changes (.emph[share-alike]).
-
----
-
-## Make it persistent and citable
-
-- Add a [CITATION.cff](https://citation-file-format.github.io/) file:
+E.g. via [CITATION.cff](https://citation-file-format.github.io/) file:
 ```yml
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
@@ -886,16 +898,6 @@ doi: 10.5281/zenodo.1234
 date-released: 2021-08-11
 ```
 
-- Get a [digital object identifier
-  (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code
-  [Zenodo](https://zenodo.org/) or similar.
-
-- [Software Heritage](https://www.softwareheritage.org/) and
-  [CodeMeta](https://codemeta.github.io/) exist as an alternative ecosystem
-  that is currently receiving some attention on a European level. Comparison
-  and links to converters can be found in
-  <https://zenodo.org/record/8086413>.
-
 ---
 
 ## Many tools understand CITATION.cff
@@ -905,6 +907,22 @@ date-released: 2021-08-11
 <img src="img/cite-this-repo.png"
      alt="Screenshot of a GitHub repository when clicked on 'Cite this repository'"
      style="width: 100%;" />
+
+---
+
+## Make your code persistent
+
+<br>
+
+Making a code public on GitHub is not enough. It may not exist anymore in X years. Links may change... 
+
+**Better:** 
+
+Get a [digital object identifier (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier) for your code from [Zenodo](https://zenodo.org/) or similar.
+
+<br>
+
+[Software Heritage](https://www.softwareheritage.org/) and [CodeMeta](https://codemeta.github.io/) exist as an alternative ecosystem that is currently receiving some attention on a European level. Comparison and links to converters can be found in <https://zenodo.org/record/8086413>.
 
 ---
 
@@ -930,11 +948,112 @@ class: middle, inverse
 
 [Sharing and reusing exercises](https://samumantha.github.io/research-software-engineering/sharing/)
 
+Choose what seems most relevant: 
+- Sharing-1: Check your organizations licensing recommendations
+- Sharing-2: Create your own CITATION.cff file
+- Sharing-3: Discuss derivative work
+- Sharing-4: Discuss common licensing situations
+- Sharing-5: Get a "dummy DOI" for your repository
+- Additional-sharing: What can you do with the planets code?
+
 ---
 
-## Part 6/6 - Wrap up - 10 min
+class: center, middle
+
+## Part 6/6 - Where to go from here - 10 min
 
 ---
+
+## Practical version control
+
+.left-column50[
+### Simple personal projects
+
+- Start with just the `main` branch
+- Later use branches for unfinished/untested ideas
+- Use tags to mark important milestones (`phd-thesis-submitted`, `published-manuscript`)
+- Better too many commits than too few
+- Better imperfect commits than no commits
+
+### Projects with few persons
+
+- Write-protect the `main` branch
+- New idea/feature: new branch
+- Use code review: changes are reviewed and discussed before they are merged
+]
+
+.right-column50[
+- [Install and configure Git](https://coderefinery.github.io/installation/)
+
+- In 3 commands from nothing to first commit:
+```bash
+$ git init
+$ git add myscript.py
+$ git commit
+```
+
+- Go through [CodeRefinery](https://coderefinery.org/) lessons ([Git
+  intro](https://coderefinery.github.io/git-intro/) and [Collaborative
+  Git](https://coderefinery.github.io/git-collaborative/))
+]
+
+---
+
+## Practical reproducibility
+
+<br>
+<br>
+
+- Use filenames that still make sense to you in a few weeks
+
+- Use an intuitive project structure
+
+- Write down your dependencies in a file
+
+- Write down how to run your codes step by step
+     -> If it gets complicated, look into workflow tools
+
+---
+
+## Practical documentation
+
+<br>
+<br>
+
+- With good naming you might need less in-code documentation
+
+- Where things are not obvious, write a comment
+
+- Provide a README with all headers from the checklist
+
+- If the README gets hard to navigate, look into static site generators
+
+- Extensions may help integrating docstrings automatically
+
+
+---
+
+## Practical licensing
+
+- Create a `LICENSE` file or `LICENSES/` folder in your project which will hold
+  [license texts](https://reuse.software/faq/#license-templates).
+- On top of each file add and adapt
+  the following header ([more examples](https://reuse.software/faq/)):
+  ```bash 
+  # SPDX-FileCopyrightText: 2023 Jane Doe <jane@example.com>
+  #
+  # SPDX-License-Identifier: MIT
+  ```
+
+Practical steps for making **changes to an existing project** (with a license
+that allows you to do so):
+- .emph[Fork] (copy) the project.
+- .emph[Summarize your changes] in file headers and bigger-picture changes in the README.
+- Some licenses are more .emph[permissive] (you can keep your changes private) but some licenses
+  require you to publish the changes (.emph[share-alike]).
+
+---
+
 
 ## Where to go from here
 
@@ -945,6 +1064,8 @@ class: middle, inverse
 .cite[The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307]
 
 ---
+
+
 
 
 # Recommendations - It's about communicating!
@@ -980,6 +1101,8 @@ class: middle, inverse
 <br>
 
 -> Come to [CodeRefinery workshop in September/October](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
+
+-> Discuss these and other topics with other enthusiasts at [Nordic-RSE](https://nordic-rse.org/).
 
 ---
 
