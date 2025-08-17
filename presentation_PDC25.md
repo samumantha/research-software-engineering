@@ -1,6 +1,6 @@
 class: center, middle, gray-background
 
-# Research software engineering for you
+# Research Software Engineering for you
 
 ## Samantha Wittke (CSC - IT Center for Science)
 
@@ -915,7 +915,7 @@ date-released: 2021-08-11
 
 <br>
 
-Making a code public on GitHub is not enough. It may not exist anymore in X years. Links may change... 
+Making a code public on GitHub is **not enough**. It may not exist anymore in X years. Links may change... 
 
 **Better:** 
 
@@ -970,6 +970,8 @@ Choose what seems most relevant:
 
 ## Practical version control
 
+<br>
+
 - [Install and configure Git](https://coderefinery.github.io/installation/)
 
 - In 3 commands from nothing to first commit:
@@ -979,10 +981,10 @@ $ git add myscript.py
 $ git commit
 ```
 
-- Go through [CodeRefinery](https://coderefinery.org/) lessons ([Git
+- Go through [CodeRefinery](https://coderefinery.org/) lessons [Git
   intro](https://coderefinery.github.io/git-intro/) and [Collaborative
-  Git](https://coderefinery.github.io/git-collaborative/))
-]
+  Git](https://coderefinery.github.io/git-collaborative/)
+
 
 ---
 
@@ -1015,9 +1017,9 @@ $ git commit
 <br>
 <br>
 
-- Use filenames that still make sense to you in a few weeks
+- Use file- and variable names that still make sense to you in a few weeks
 
-- Use an intuitive project structure
+- Use an **intuitive project structure**
 
 - Write down your dependencies in a file
 
@@ -1031,7 +1033,7 @@ $ git commit
 <br>
 <br>
 
-- With good naming you might need less in-code documentation
+- With **good naming** you might need less in-code documentation
 
 - Where things are not obvious, write a comment
 
@@ -1065,8 +1067,6 @@ that allows you to do so):
 
 ---
 
-class: center, middle
-
 ## Where to go from here
 
 <img src="img/reproducibility.jpg"
@@ -1077,7 +1077,7 @@ class: center, middle
 
 ---
 
-# Recommendations - It's about communicating!
+## Recommendations - It's about communicating!
 
 - Track your code with Git
 
