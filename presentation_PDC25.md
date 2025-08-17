@@ -11,7 +11,7 @@ class: center, middle, gray-background
 Text: CC-BY 4.0
 (Big thanks to previous versions by Radovan Bast and the CodeRefinery team)
 
-Link to these slides: TODO
+Link to these slides: <https://doi.org/10.5281/zenodo.16891176>
 
 ---
 
