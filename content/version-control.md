@@ -402,7 +402,7 @@ Your goal is to find out when precisely
 was modified last time (which commit)?
 
 :::{solution}
-It was this commit:
+Use the blame tab (up left in the code window on GitHub), find line 108 and see that it was this commit:
 <https://github.com/coderefinery/planets/commit/56cf6fdfef6a516ee369034d7c67a20237abb368>
 :::
 ::::
@@ -413,12 +413,20 @@ It was this commit:
 
 Situation: You found a tool on GitHub that you would like to use: <https://github.com/coderefinery/planets>
 
-- How would you go about trying it out? (You do not have to actually do it, but can discuss with your neighbor)
+- How would you go about trying it out on your computer? (You do not have to actually do it, but can discuss with your neighbor)
 - What kind of information would you like to find?
 
 :::{solution}
-Start by looking at the README (we will talk about this more in the documentation lesson!).
-You can get the code to your computer by `cloning the repository`.
+Start by looking at the README. We will talk about a README checklist in the documentation lesson.
+Also check when the code was last updated. Over some months without changes can be a sign for being outdated.
+You can get the code to your computer by `cloning the repository`:
+- Find the green `Code` button up right on the repositories main page
+- Copy the link under `ssh` at `local` >`clone`
+- In your (git) terminal, navigate to the place where you would like to download the code to and clone it: `git clone git@github.com:coderefinery/planets.git` (the address you copied from the box)
+- You can now open the scripts with your favorite editor.
+
+In order to run it, you would also need to install all dependencies listed in environment.yml. We will talk more about this in the Reproducibility lesson.
+
 :::
 
 ::::
