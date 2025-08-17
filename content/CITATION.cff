@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite it as below."
+authors:
+  - family-names: Bast
+    given-names: Radovan
+  - family-names: Wittke
+    given-names: Samantha
+  - family-names: CodeRefinery contributors
+title: "Research Software Engineering for you"
+version: 2025-08-17
+identifiers:
+  - type: doi
+    value: coming soon
+date-released: 2025-08-17
