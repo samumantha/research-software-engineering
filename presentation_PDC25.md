@@ -15,7 +15,6 @@ Link to these slides: TODO
 
 ---
 
-class: middle, center
 
 # Part 1/6 - Welcome - 15 min
 
@@ -137,6 +136,8 @@ Lectures and exercises:
 
 - [Sharing and reusing](https://samumantha.github.io/research-software-engineering/sharing/) + Exercises
 
+<br>
+
 Longer version of all topics including more exercises can be found in [CodeRefinery lesson materials](https://coderefinery.org/lessons).
 
 ---
@@ -176,6 +177,8 @@ Link to exercises: <https://samumantha.github.io/research-software-engineering/>
 - Some exercises link to it
 
 ]
+
+<br>
 
 Link to example project: <https://github.com/coderefinery/planets>
 
@@ -217,17 +220,14 @@ class: middle, center
 
 <img src="img/git_github.png" style="width: 400px;"/>
 
-.left-column50[
+<br>
 
-Git - version control system (track changes)
+**Git** - version control system (track changes)
 
-]
+<br>
 
-.right-column50[
+**GitHub**, GitLab, Codeberg, ... -  hosting, collaboration and sharing
 
-GitHub, GitLab, Codeberg, ... -  hosting, collaboration and sharing
-
-]
 
 ---
 
@@ -293,6 +293,9 @@ can support merging them together.  Image created using <https://gopherize.me/>
 ---
 
 ## Features
+
+<br>
+<br>
 
 - Through commits you know what changed when and by whom
 
@@ -365,19 +368,19 @@ can support merging them together.  Image created using <https://gopherize.me/>
 <br>
 
 
-- Software (this is how it started but Git/GitHub can track a lot more)
+- **Software** (this is how it started but Git/GitHub can track a lot more)
 
-- Scripts
+- **Scripts**
 
-- Documents (plain text files much better suitable than Word documents, this material and slides are tracked using Git)
+- **Documents** (plain text files much better suitable than Word documents, this material and slides are tracked using Git)
 
-- Manuscripts (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
+- **Manuscripts** (Git is great for collaborating/sharing LaTeX or [Quarto](https://quarto.org/) manuscripts)
 
-- Configuration files
+- **Configuration files**
 
-- Website sources : [Source for CodeRefinery website](https://github.com/coderefinery/coderefinery.org/)
+- Website **sources** : [Source for CodeRefinery website](https://github.com/coderefinery/coderefinery.org/)
 
-- Data (see also [git-annex](https://scicomp.aalto.fi/scicomp/git-annex/), [git LFS](https://git-lfs.com/))
+- **Data** (see also [git-annex](https://scicomp.aalto.fi/scicomp/git-annex/), [git LFS](https://git-lfs.com/))
 
 ---
 
@@ -393,10 +396,7 @@ class: middle, inverse
 - Git-2: Archaeology with git
 - Additional-vc: What do you do with a code you find online
 
-
 ---
-
-class: middle, center
 
 ## Part 3/6 - 20 min
 
@@ -456,7 +456,7 @@ project_name/
 
 class: middle, center
 
-## Have you ever been sure your code works… until your colleague runs it?”
+## Have you ever been sure your code works… until your colleague runs it?
 
 ---
 
@@ -466,9 +466,11 @@ class: middle, center, inverse
 
 ---
 
-### We usually do not start from scratch ...
+class: middle, center
 
-### ... but build on other tools and packages
+## We usually do not start from scratch ...
+
+## ... but build on other tools and packages
 
 .quote[-> We need to communicate what is needed to run our code!]
 
@@ -538,8 +540,6 @@ class: middle, inverse
 # Break - 20 min
 
 ---
-
-class: middle, center
 
 ## Part 4/6 - Documentation - 20 min
 
@@ -766,7 +766,6 @@ class: middle, inverse
 
 ---
 
-class: middle, center
 
 ## Part 5/6 - Sharing and reusing - 10 min
 
@@ -870,12 +869,12 @@ Journal requires that papers should come with data and software so that they are
 
 .cite[European Union Public Licence (EUPL): guidelines July 2021, <https://data.europa.eu/doi/10.2799/77160>]
 
-Arrows represent compatibility: A -> B: B can reuse A
+
 ]
 
 .right-column50[
 - .emph[Derivative work]: You have started from an existing code and made changes to
-  it or if you incorporated an existing code into your code, beware the "sticky licenses"
+  it or if you incorporated an existing code into your code, beware the "sticky licenses" (arrows in the image represent compatibility: A -> B: B can reuse A)
 
 - You have started from scratch: .emph[not derivative work]
 ]
@@ -960,9 +959,30 @@ Choose what seems most relevant:
 
 ---
 
-class: center, middle
-
 ## Part 6/6 - Where to go from here - 10 min
+
+- Practical info
+- Where to go from here
+- Recommendations
+- Thanks
+
+---
+
+## Practical version control
+
+- [Install and configure Git](https://coderefinery.github.io/installation/)
+
+- In 3 commands from nothing to first commit:
+```bash
+$ git init
+$ git add myscript.py
+$ git commit
+```
+
+- Go through [CodeRefinery](https://coderefinery.org/) lessons ([Git
+  intro](https://coderefinery.github.io/git-intro/) and [Collaborative
+  Git](https://coderefinery.github.io/git-collaborative/))
+]
 
 ---
 
@@ -977,26 +997,15 @@ class: center, middle
 - Better too many commits than too few
 - Better imperfect commits than no commits
 
+]
+
+.right-column50[
+
 ### Projects with few persons
 
 - Write-protect the `main` branch
 - New idea/feature: new branch
 - Use code review: changes are reviewed and discussed before they are merged
-]
-
-.right-column50[
-- [Install and configure Git](https://coderefinery.github.io/installation/)
-
-- In 3 commands from nothing to first commit:
-```bash
-$ git init
-$ git add myscript.py
-$ git commit
-```
-
-- Go through [CodeRefinery](https://coderefinery.org/) lessons ([Git
-  intro](https://coderefinery.github.io/git-intro/) and [Collaborative
-  Git](https://coderefinery.github.io/git-collaborative/))
 ]
 
 ---
@@ -1056,6 +1065,7 @@ that allows you to do so):
 
 ---
 
+class: center, middle
 
 ## Where to go from here
 
@@ -1066,9 +1076,6 @@ that allows you to do so):
 .cite[The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: https://zenodo.org/records/13882307]
 
 ---
-
-
-
 
 # Recommendations - It's about communicating!
 
@@ -1083,8 +1090,7 @@ that allows you to do so):
 - Make your code/script/notebook citable and give it a license
 
 
-
-.quote[Good enough is better than perfect!]
+.quote[Embrace "Good enough"!]
 
 .quote[Spending a thought on these topics now may make your life easer in the future.]
 
@@ -1120,28 +1126,3 @@ class: center, middle, inverse
 <br>
 
 <https://coderefinery.org/>
-
----
-
-## Addition: Containers- kitchen analogy
-
-.left-column50[
-
-<img src="img/docker-meme.jpg"
-     alt="He said, then we will ship your machine. And that's how Docker was born."
-     style="height: 450px;" />
-
-.cite[From [reddit](https://www.reddit.com/r/ProgrammerHumor/comments/cw58z7/it_works_on_my_machine/)]
-]
-
-.right-column50[
-
-- Our codes/scripts <-> cooking recipes
-
-- Container definition files <-> like a blueprint to build a kitchen with all
-  utensils in which the recipe can be prepared.
-
-- Container images <-> example kitchens
-
-- Containers <-> identical factory-built mobile food truck kitchens
-]
