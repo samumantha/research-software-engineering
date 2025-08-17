@@ -109,7 +109,7 @@ You may also explore other tools like [cff initializer](https://citation-file-fo
 
 
 
-:::{exercise} Exercise Sharing-4: What constitutes derivative work?
+:::{exercise} Exercise Sharing-3: What constitutes derivative work?
 
 Which of these are derivative works?  Also reflect/discuss how this affects the
 choice of license.
@@ -130,7 +130,7 @@ choice of license.
 ```
 :::
 
-:::{exercise} Exercise Sharing-5: Licensing situations
+:::{exercise} Exercise Sharing-4: Licensing situations
 
 Consider some common licensing situations. If you are part of an exercise
 group, discuss these with others:
@@ -157,7 +157,7 @@ group, discuss these with others:
 ```
 :::
 
-:::{exercise} Exercise Sharing-3: Get a "dummy" DOI for your code
+:::{exercise} Exercise Sharing-5: Get a "dummy" DOI for your code
 
 You can now practice getting a DOI using the [Zenodo
 sandbox](https://sandbox.zenodo.org).  We use here the Zenodo sandbox and not
@@ -175,13 +175,13 @@ How to get a DOI using the [Zenodo sandbox](https://sandbox.zenodo.org):
 
 ::::{exercise} Exercise Additional-sharing: You find a useful code online...
 
-Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+Situation: You found a tool on GitHub that you would like to use: <https://github.com/coderefinery/planets>
 
-What can you do with the code as is?
+What can you legally do with the code as is?
 
 
 :::{solution}
-Currently the project does not include a LICENSE file, which means you should probably stay clear of the tool. Best would be to ask the author to add a license to clarfify the legal situation, for example via issue.
+Currently the project does not include a LICENSE file, which means you should probably stay clear of the tool. Legally you cannot reuse the code. It would be best to ask the author to add a license to clarfify the legal situation, for example via issue.
 :::
 
 ::::

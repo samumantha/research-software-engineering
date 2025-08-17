@@ -279,13 +279,13 @@ commit hashes or Git tags.
 
 ::::{exercise} Exercise Additional-repro: You find a useful code online...
 
-Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+Situation: You found a tool on GitHub that you would like to use: <https://github.com/coderefinery/planets>
 
-You find the environment.yml. Will you get the same environment now, that someone will get a year from now?
+Have a look at the environment.yml. What problems could appear when installing the packages a year from now?
 
 
 :::{solution}
-No, since, except for Python version, no version numbers are defined, this means a tool like conda will get you the latest available version. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.
+Except for Python version, no version numbers are defined, this means a tool like conda will get you the latest available version. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions. Dependencies can also have dependencies, which can be incompatible with others (package A needs package X with version 2, while package B needs package X with version 3) -> Tools like conda/pip will find compatible versions for you.
 :::
 ::::
 

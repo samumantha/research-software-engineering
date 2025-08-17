@@ -411,7 +411,7 @@ int main()
 
 :::::{exercise} Exercise Additional-doc: You find a useful code online...
 
-Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
+Situation: You found a tool on GitHub that you would like to use: <https://github.com/coderefinery/planets>
 
 - Where do you look for information on how to install, run the code? Can you find all needed information? 
 - If this code is really useful for your work, but you do not understand how to use it, how could you find out or ask for more?

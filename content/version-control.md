@@ -420,8 +420,8 @@ Situation: You found a tool on GitHub that you would like to use: <https://githu
 Start by looking at the README. We will talk about a README checklist in the documentation lesson.
 Also check when the code was last updated. Over some months without changes can be a sign for being outdated.
 You can get the code to your computer by `cloning the repository`:
-- Find the green `Code` button up right on the repositories main page
-- Copy the link under `ssh` at `local` >`clone`
+- Log in to GitHub, find the green `Code` button up right on the repositories main page
+- Copy the link under `ssh` at `local` >`clone` 
 - In your (git) terminal, navigate to the place where you would like to download the code to and clone it: `git clone git@github.com:coderefinery/planets.git` (the address you copied from the box)
 - You can now open the scripts with your favorite editor.
 
