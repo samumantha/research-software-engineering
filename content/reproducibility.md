@@ -120,8 +120,8 @@ try to re-run their code before adapting it.
        - python
        - pip
        - pip:
-         - git+https://github.com/someuser/someproject.git@master
-         - git+https://github.com/anotheruser/anotherproject.git@master
+         - git+https://github.com/someuser/someproject.git@main
+         - git+https://github.com/anotheruser/anotherproject.git@main
      ```
 
      **D**:

@@ -409,7 +409,7 @@ int main()
 
 ## Additional optional exercise
 
-::::{exercise} Exercise Additional-doc: You find a useful code online...
+:::::{exercise} Exercise Additional-doc: You find a useful code online...
 
 Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets
 
@@ -417,7 +417,7 @@ Situation: You found a tool on GitHub that you would like to use: https://github
 - If this code is really useful for your work, but you do not understand how to use it, how could you find out or ask for more?
 
 
-:::{solution}
+::::{solution}
 First you look for a README; if further documentation is available, it is usually mentioned in the README. 
 Sections are there but it seems to be a work in progress and many are not filled with useful information. To find out more you could create an issue, asking for more information. Feel free to send issues suggesting improvements to the repository or asking for clarifications! You may also try setting up the environment and try running the code on your computer.  
 
@@ -426,9 +426,9 @@ Sections are there but it seems to be a work in progress and many are not filled
 :width: 100%
 :class: with-border
 :::
-:::
-
 ::::
+
+:::::
 
 :::{keypoints}
 - Often a README is enough.
