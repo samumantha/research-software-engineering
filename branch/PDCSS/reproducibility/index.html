@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reproducible dependencies, environments and workflows &mdash; Research software engineering (&#34;CodeRefinery in 1 hour&#34;)  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="../_static/tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Documentation" href="../documentation/" />
+    <link rel="prev" title="Version control and code review" href="../version-control/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Research software engineering ("CodeRefinery in 1 hour")
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../example/">Example project: simulating the motion of planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Version control and code review</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reproducible dependencies, environments and workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#it-all-starts-with-a-good-directory-structure">It all starts with a good directory structure …</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-avoid-it-works-on-my-machine">How to avoid: “It works on my machine 🤷”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#where-to-explore-more">Where to explore more</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-optional-exercise">Additional optional exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Where to explore more</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies-for-compiled-languages">Dependencies for compiled languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Where to explore more</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sharing/">Sharing (licensing and publishing)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional materials and exercises</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cmake/">Building code with CMake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/">Container exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/">Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About CodeRefinery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/">CodeRefinery lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Research software engineering ("CodeRefinery in 1 hour")</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Reproducible dependencies, environments and workflows</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/research-software-engineering/blob/main/content/reproducibility.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reproducible-dependencies-environments-and-workflows">
+<h1>Reproducible dependencies, environments and workflows<a class="headerlink" href="#reproducible-dependencies-environments-and-workflows" title="Permalink to this heading"></a></h1>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Understand that there are tools to help with dependency management</p></li>
+<li><p>Understand the difference between a <strong>script</strong> and a <strong>workflow</strong>.</p></li>
+<li><p>Understand the pros and cons of “simple” scripts.</p></li>
+</ul>
+</div>
+<div class="admonition-instructor-note instructor-note admonition" id="instructor-note-0">
+<p class="admonition-title">Instructor note</p>
+<ul class="simple">
+<li><p>20 min teaching/discussion</p></li>
+</ul>
+</div>
+</section>
+<section id="it-all-starts-with-a-good-directory-structure">
+<h1>It all starts with a good directory structure …<a class="headerlink" href="#it-all-starts-with-a-good-directory-structure" title="Permalink to this heading"></a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project_name/
+├── README.md             # overview of the project
+├── data/                 # data files used in the project
+│   ├── README.md         # describes where data came from
+│   └── sub-folder/       # may contain subdirectories
+├── processed_data/       # intermediate files from the analysis
+├── manuscript/           # manuscript describing the results
+├── results/              # results of the analysis (data, tables, figures)
+├── src/                  # contains all code in the project
+│   ├── LICENSE           # license for your code
+│   ├── requirements.txt  # software requirements and dependencies
+│   └── ...
+└── doc/                  # documentation for your project
+    ├── index.rst
+    └── ...
+</pre></div>
+</div>
+<section id="how-to-avoid-it-works-on-my-machine">
+<h2>How to avoid: “It works on my machine 🤷”<a class="headerlink" href="#how-to-avoid-it-works-on-my-machine" title="Permalink to this heading"></a></h2>
+<p>There are not many codes that have no dependencies.</p>
+<p>Use a <strong>standard way</strong> to list dependencies in your project:</p>
+<ul class="simple">
+<li><p>Python: <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code></p></li>
+<li><p>R: <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> or <code class="docutils literal notranslate"><span class="pre">renv.lock</span></code></p></li>
+<li><p>Rust: <code class="docutils literal notranslate"><span class="pre">Cargo.lock</span></code></p></li>
+<li><p>Julia: <code class="docutils literal notranslate"><span class="pre">Project.toml</span></code></p></li>
+<li><p>C/C++/Fortran: <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> or <code class="docutils literal notranslate"><span class="pre">spack.yaml</span></code> or the module
+system on clusters or containers</p></li>
+<li><p>Other languages: …</p></li>
+</ul>
+<p>Install dependencies into <strong>isolated environments</strong>:</p>
+<ul class="simple">
+<li><p>For each project, create a new environment.</p></li>
+<li><p>Don’t install dependencies globally for all projects.</p></li>
+<li><p>Install them <strong>from a file</strong> which documents them at the same time.</p></li>
+</ul>
+</section>
+<section id="where-to-explore-more">
+<h2>Where to explore more<a class="headerlink" href="#where-to-explore-more" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://coderefinery.github.io/reproducible-research/">Reproducible research</a></p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html">The Turing Way: Guide for Reproducible Research</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1008316">Ten simple rules for writing Dockerfiles for reproducible data science</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.5281/zenodo.8089471">Computing environment reproducibility</a></p></li>
+</ul>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading"></a></h2>
+<div class="admonition-exercise-reproducibility-1-time-capsule-of-dependencies exercise important admonition" id="exercise-0">
+<p class="admonition-title">Exercise Reproducibility-1: Time-capsule of dependencies</p>
+<p>Imagine the following situation: Five students (A, B, C, D, E) wrote a code
+that depends on a couple of libraries.  They uploaded their projects to GitHub.
+We now travel <strong>3 years into the future</strong> and find their GitHub repositories and
+try to re-run their code before adapting it.</p>
+<ul class="simple">
+<li><p>Which version do you expect to be easiest to re-run? Why?</p></li>
+<li><p>What problems do you anticipate in each solution?</p></li>
+</ul>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-Q29uZGE=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Q29uZGE=" name="Q29uZGE=" role="tab" tabindex="0">Conda</button><button aria-controls="panel-0-UHl0aG9uIHZpcnR1YWxlbnY=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9uIHZpcnR1YWxlbnY=" name="UHl0aG9uIHZpcnR1YWxlbnY=" role="tab" tabindex="-1">Python virtualenv</button><button aria-controls="panel-0-Ug==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-0-Q29uZGE=" class="sphinx-tabs-panel group-tab" id="panel-0-Q29uZGE=" name="Q29uZGE=" role="tabpanel" tabindex="0"><p><strong>A</strong>:
+You find a couple of library imports across the code but that’s it.</p>
+<p><strong>B</strong>:
+The README file lists which libraries were used but does not mention
+any versions.</p>
+<p><strong>C</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">student</span><span class="o">-</span><span class="n">project</span>
+<span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">scipy</span>
+  <span class="o">-</span> <span class="n">numpy</span>
+  <span class="o">-</span> <span class="n">sympy</span>
+  <span class="o">-</span> <span class="n">click</span>
+  <span class="o">-</span> <span class="n">python</span>
+  <span class="o">-</span> <span class="n">pip</span>
+  <span class="o">-</span> <span class="n">pip</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">someuser</span><span class="o">/</span><span class="n">someproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+    <span class="o">-</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">anotheruser</span><span class="o">/</span><span class="n">anotherproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p><strong>D</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">student</span><span class="o">-</span><span class="n">project</span>
+<span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">scipy</span><span class="o">=</span><span class="mf">1.3.1</span>
+  <span class="o">-</span> <span class="n">numpy</span><span class="o">=</span><span class="mf">1.16.4</span>
+  <span class="o">-</span> <span class="n">sympy</span><span class="o">=</span><span class="mf">1.4</span>
+  <span class="o">-</span> <span class="n">click</span><span class="o">=</span><span class="mf">7.0</span>
+  <span class="o">-</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.8</span>
+  <span class="o">-</span> <span class="n">pip</span>
+  <span class="o">-</span> <span class="n">pip</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">someuser</span><span class="o">/</span><span class="n">someproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@d7b2c7e</span>
+    <span class="o">-</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">anotheruser</span><span class="o">/</span><span class="n">anotherproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@sometag</span>
+</pre></div>
+</div>
+<p><strong>E</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">student</span><span class="o">-</span><span class="n">project</span>
+<span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">dependencies</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">scipy</span><span class="o">=</span><span class="mf">1.3.1</span>
+  <span class="o">-</span> <span class="n">numpy</span><span class="o">=</span><span class="mf">1.16.4</span>
+  <span class="o">-</span> <span class="n">sympy</span><span class="o">=</span><span class="mf">1.4</span>
+  <span class="o">-</span> <span class="n">click</span><span class="o">=</span><span class="mf">7.0</span>
+  <span class="o">-</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.8</span>
+  <span class="o">-</span> <span class="n">someproject</span><span class="o">=</span><span class="mf">1.2.3</span>
+  <span class="o">-</span> <span class="n">anotherproject</span><span class="o">=</span><span class="mf">2.3.4</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-UHl0aG9uIHZpcnR1YWxlbnY=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UHl0aG9uIHZpcnR1YWxlbnY=" name="UHl0aG9uIHZpcnR1YWxlbnY=" role="tabpanel" tabindex="0"><p><strong>A</strong>:
+You find a couple of library imports across the code but that’s it.</p>
+<p><strong>B</strong>:
+The README file lists which libraries were used but does not mention
+any versions.</p>
+<p><strong>C</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipy</span>
+<span class="n">numpy</span>
+<span class="n">sympy</span>
+<span class="n">click</span>
+<span class="n">python</span>
+<span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">someuser</span><span class="o">/</span><span class="n">someproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+<span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">anotheruser</span><span class="o">/</span><span class="n">anotherproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p><strong>D</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipy</span><span class="o">==</span><span class="mf">1.3.1</span>
+<span class="n">numpy</span><span class="o">==</span><span class="mf">1.16.4</span>
+<span class="n">sympy</span><span class="o">==</span><span class="mf">1.4</span>
+<span class="n">click</span><span class="o">==</span><span class="mf">7.0</span>
+<span class="n">python</span><span class="o">==</span><span class="mf">3.8</span>
+<span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">someuser</span><span class="o">/</span><span class="n">someproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@d7b2c7e</span>
+<span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">anotheruser</span><span class="o">/</span><span class="n">anotherproject</span><span class="o">.</span><span class="n">git</span><span class="nd">@sometag</span>
+</pre></div>
+</div>
+<p><strong>E</strong>:
+You find a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scipy</span><span class="o">==</span><span class="mf">1.3.1</span>
+<span class="n">numpy</span><span class="o">==</span><span class="mf">1.16.4</span>
+<span class="n">sympy</span><span class="o">==</span><span class="mf">1.4</span>
+<span class="n">click</span><span class="o">==</span><span class="mf">7.0</span>
+<span class="n">python</span><span class="o">==</span><span class="mf">3.8</span>
+<span class="n">someproject</span><span class="o">==</span><span class="mf">1.2.3</span>
+<span class="n">anotherproject</span><span class="o">==</span><span class="mf">2.3.4</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Ug==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Ug==" name="Ug==" role="tabpanel" tabindex="0"><p><strong>A</strong>:
+You find a couple of <code class="docutils literal notranslate"><span class="pre">library()</span></code> or <code class="docutils literal notranslate"><span class="pre">require()</span></code> calls across the code but that’s it.</p>
+<p><strong>B</strong>:
+The README file lists which libraries were used but does not mention
+any versions.</p>
+<p><strong>C</strong>:
+You find a <a class="reference external" href="https://r-pkgs.org/description.html">DESCRIPTION file</a> which contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Imports</span><span class="p">:</span>
+    <span class="n">dplyr</span><span class="p">,</span>
+    <span class="n">tidyr</span>
+</pre></div>
+</div>
+<p>In addition you find these:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;someuser/someproject@master&quot;</span><span class="p">)</span>
+<span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;anotheruser/anotherproject@master&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>D</strong>:
+You find a <a class="reference external" href="https://r-pkgs.org/description.html">DESCRIPTION file</a> which contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Imports</span><span class="p">:</span>
+    <span class="n">dplyr</span> <span class="p">(</span><span class="o">==</span> <span class="mf">1.0.0</span><span class="p">),</span>
+    <span class="n">tidyr</span> <span class="p">(</span><span class="o">==</span> <span class="mf">1.1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition you find these:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;someuser/someproject@d7b2c7e&quot;</span><span class="p">)</span>
+<span class="n">remotes</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;anotheruser/anotherproject@sometag&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>E</strong>:
+You find a <a class="reference external" href="https://r-pkgs.org/description.html">DESCRIPTION file</a> which contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Imports</span><span class="p">:</span>
+    <span class="n">dplyr</span> <span class="p">(</span><span class="o">==</span> <span class="mf">1.0.0</span><span class="p">),</span>
+    <span class="n">tidyr</span> <span class="p">(</span><span class="o">==</span> <span class="mf">1.1.0</span><span class="p">),</span>
+    <span class="n">someproject</span> <span class="p">(</span><span class="o">==</span> <span class="mf">1.2.3</span><span class="p">),</span>
+    <span class="n">anotherproject</span> <span class="p">(</span><span class="o">==</span> <span class="mf">2.3.4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<p><strong>A</strong>: It will be tedious to collect the dependencies one by one. And after
+the tedious process you will still not know which versions they have used.</p>
+<p><strong>B</strong>: If there is no standard file to look for and look at and it might
+become very difficult for to create the software environment required to
+run the software. But at least we know the list of libraries. But we don’t
+know the versions.</p>
+<p><strong>C</strong>: Having a standard file listing dependencies is definitely better
+than nothing. However, if the versions are not specified, you or someone
+else might run into problems with dependencies, deprecated features,
+changes in package APIs, etc.</p>
+<p><strong>D</strong> and <strong>E</strong>: In both these cases exact versions of all dependencies are
+specified and one can recreate the software environment required for the
+project. One problem with the dependencies that come from GitHub is that
+they might have disappeared (what if their authors deleted these
+repositories?).</p>
+<p><strong>E</strong> is slightly preferable because version numbers are easier to understand than Git
+commit hashes or Git tags.</p>
+</div>
+</div>
+</section>
+<section id="additional-optional-exercise">
+<h2>Additional optional exercise<a class="headerlink" href="#additional-optional-exercise" title="Permalink to this heading"></a></h2>
+<div class="admonition-exercise-additional-repro-you-find-a-useful-code-online exercise important admonition" id="exercise-1">
+<p class="admonition-title">Exercise Additional-repro: You find a useful code online…</p>
+<p>Situation: You found a tool on GitHub that you would like to use: https://github.com/coderefinery/planets</p>
+<p>You find the environment.yml. Will you get the same environment now, that someone will get a year from now?</p>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<p>No, since, except for Python version, no version numbers are defined. This may not be an issue, and in many cases even good to get the latest versions of everything, but it might mean that you have to spend some time debugging in case function names (or their arguments) changed between versions.</p>
+</div>
+<p class="rubric">Automation and reproducible workflows</p>
+<p class="rubric">What if we need to run many similar calculations?</p>
+<p>It all started relatively simple:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>generate-data.py<span class="w"> </span>--num-planets<span class="w"> </span><span class="m">100</span><span class="w"> </span>--output-file<span class="w"> </span>initial.csv
+
+python<span class="w"> </span>simulate.py<span class="w"> </span>--num-steps<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                   </span>--input-file<span class="w"> </span>initial.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                   </span>--output-file<span class="w"> </span>final.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                   </span>--trajectories-file<span class="w"> </span>trajectories.npz
+
+python<span class="w"> </span>animate.py<span class="w"> </span>--initial-file<span class="w"> </span>initial.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                  </span>--trajectories-file<span class="w"> </span>trajectories.npz<span class="w"> </span><span class="se">\</span>
+<span class="w">                  </span>--output-file<span class="w"> </span>animation.mp4
+</pre></div>
+</div>
+<p>But now we want to run this for <strong>different numbers of planets</strong>:
+10, 20, 30, 40, …</p>
+<p>One possible solution:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="hll"><span class="k">for</span><span class="w"> </span>num_planets<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span class="hll"><span class="w">    </span>python<span class="w"> </span>generate-data.py<span class="w"> </span>--num-planets<span class="w"> </span><span class="si">${</span><span class="nv">num_planets</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+</span><span class="w">                            </span>--output-file<span class="w"> </span>initial.csv
+
+<span class="w">    </span>python<span class="w"> </span>simulate.py<span class="w"> </span>--num-steps<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                       </span>--input-file<span class="w"> </span>initial.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                       </span>--output-file<span class="w"> </span>final.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                       </span>--trajectories-file<span class="w"> </span>trajectories.npz
+
+<span class="w">    </span>python<span class="w"> </span>animate.py<span class="w"> </span>--initial-file<span class="w"> </span>initial.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">                      </span>--trajectories-file<span class="w"> </span>trajectories.npz<span class="w"> </span><span class="se">\</span>
+<span class="hll"><span class="w">                      </span>--output-file<span class="w"> </span>animation-<span class="si">${</span><span class="nv">num_planets</span><span class="si">}</span>.mp4
+</span><span class="hll"><span class="k">done</span>
+</span></pre></div>
+</div>
+<p class="rubric">Discussion</p>
+<div class="admonition-how-would-you-solve-this-problem discussion important admonition" id="discussion-0">
+<p class="admonition-title">How would you solve this problem?</p>
+<p>Can you list some alternatives to the solution presented above
+(for-loop inside a shell script)?</p>
+</div>
+<div class="admonition-what-are-the-pros-and-cons-of-the-solution-presented-above discussion important admonition" id="discussion-1">
+<p class="admonition-title">What are the pros and cons of the solution presented above?</p>
+<ul class="simple">
+<li><p>Consider the case where a step can take hours.</p></li>
+<li><p>Imagine needing to run hundreds of calculations.</p></li>
+<li><p>Consider the case where a step/calculation can fail.</p></li>
+<li><p>Consider the case where you might
+find a mistake in one of the Python scripts.</p></li>
+</ul>
+<div class="admonition-solution solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Solution</p>
+<p>What is good about the shell script solution:</p>
+<ul class="simple">
+<li><p>It documents what steps are taken.</p></li>
+<li><p>Relatively simple.</p></li>
+<li><p>Good solution if you only need to run this once or if it takes no time.</p></li>
+</ul>
+<p>Problems:</p>
+<ul class="simple">
+<li><p>Independent calculations are run one after the other.</p></li>
+<li><p>If some of them fail, you need to re-run everything or start commenting out
+lines.</p></li>
+<li><p>If you find a mistake in one of the scripts, we again need to re-run
+everything or start commenting out lines.</p></li>
+<li><p>What if separate steps need different resources (e.g., memory, CPU)
+or environments (e.g., different Python versions)?</p></li>
+</ul>
+<p>In this situation we need a <strong>workflow/pipeline</strong> management tool.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Where to explore more<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://snakemake.github.io/">Snakemake</a></p></li>
+<li><p><a class="reference external" href="https://www.nextflow.io/">Nextflow</a></p></li>
+<li><p>There are many more workflow/pipeline
+tools and frameworks. <strong>Do not invent your own!</strong></p></li>
+</ul>
+</section>
+<section id="dependencies-for-compiled-languages">
+<h2>Dependencies for compiled languages<a class="headerlink" href="#dependencies-for-compiled-languages" title="Permalink to this heading"></a></h2>
+<p>Programs written in compiled languages such as C, C++, and Fortran
+often depend on one or more libraries. For instance, scientific codes for
+numerical simulations often make use of libraries for linear algebra,
+random number generation, and fast Fourier transforms.</p>
+<ul class="simple">
+<li><p>Some of the common libraries are established for long and have a very stable application programming interface.</p></li>
+<li><p>Other libraries are more specific and developed and used only for a single or few applications.</p></li>
+<li><p>The common libraries are often preinstalled or available via package managers. For a compute cluster,
+installations of libraries are often maintained by staff.</p></li>
+</ul>
+<p>The dependencies of an application code on libraries can be specified</p>
+<ul class="simple">
+<li><p>in a makefile or makefile.include,</p></li>
+<li><p>in CMakeLists.txt for use with the CMake build system,</p></li>
+<li><p>in easyconfig configuration files for the EasyBuild system or spack.yaml for the Spack build system.</p></li>
+</ul>
+<p>A particular situation is when building and running code on large clusters. With a large pool
+of users comes large number of programs and libraries. This needs to be managed to avoid interference.
+A common solution is to use so called module systems to selectively activate/deactive the
+programs and libraries that are of relevance. Updates of libraries need to be made with caution
+as they potentially can break the functionality of large number of programs.</p>
+</section>
+<section id="id2">
+<h2>Where to explore more<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/PDC-support/build-systems-course">Build systems course (2024)</a></p></li>
+<li><p><a class="reference external" href="https://cmake.org/">CMake build system</a></p></li>
+<li><p><a class="reference external" href="https://easybuild.io/">EasyBuild build and installation framework</a></p></li>
+<li><p><a class="reference external" href="https://spack.io/">Spack package manager</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+<span class="p">:::{</span><span class="n">keypoints</span><span class="p">}</span>
+<span class="o">-</span> <span class="n">Ideally</span> <span class="n">you</span> <span class="n">can</span> <span class="n">answer</span> <span class="n">the</span> <span class="n">question</span> <span class="n">about</span> <span class="n">dependencies</span> <span class="n">of</span> <span class="n">your</span> <span class="n">code</span> <span class="o">**</span><span class="k">with</span> <span class="n">one</span> <span class="n">file</span><span class="o">**.</span>
+<span class="o">-</span> <span class="n">Workflow</span> <span class="n">tools</span> <span class="n">can</span> <span class="n">support</span> <span class="n">reproducibility</span> <span class="n">of</span> <span class="n">running</span> <span class="n">multiple</span> <span class="n">scripts</span><span class="p">,</span> <span class="k">with</span> <span class="n">multiple</span> <span class="n">files</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="nb">input</span> <span class="n">variables</span><span class="o">.</span>
+<span class="p">:::</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../version-control/" class="btn btn-neutral float-left" title="Version control and code review" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../documentation/" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
