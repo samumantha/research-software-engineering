@@ -1098,19 +1098,19 @@ that allows you to do so):
 
 ## What we did not talk about but is important 
 
-<br>
-
 - Containers (operating system and tools within one file)
 
 - Automated testing
 
 - Modular code development
 
-<br>
-
 -> Come to [CodeRefinery workshop in September/October](https://coderefinery.github.io/2025-09-09-workshop/) or [read materials](https://coderefinery.org/lessons/#lessons-that-we-teach-in-our-tools-workshops)!
 
 -> Discuss these and other topics with other enthusiasts at [Nordic-RSE](https://nordic-rse.org/).
+
+<br>
+
+You can also find other courses on software design, performance optimization, debugging etc all around.
 
 ---
 
